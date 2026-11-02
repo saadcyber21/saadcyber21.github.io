@@ -209,7 +209,7 @@ window.SITE = {
       detail: "secret-sweep started as another heuristic scanner and became the project it is now because of a bug: <code>entropy &gt; 4.5</code> cannot fire on any token shorter than 24 characters, so a 20-character AWS key ID was undetectable by construction — including the one in the repo's own sample file. Fixing it meant measuring the detector instead of describing it, and that habit spread to everything after.",
       repos: ["secret-sweep · 3 Sep"] },
     { when: "Oct 2026", what: "Systems internals, then the adversarial counterpart",
-      detail: "Booking contention, double-entry money and workflow durability — built to understand what an agent should be allowed to touch. Then quillback on 30 October: the red-team harness that attacks the scaffold rather than the model, and the reason §03 of this page has four honest holes in it.",
+      detail: "Booking contention, double-entry money and workflow durability — built to understand what an agent should be allowed to touch. Then quillback on 30 October: the red-team harness that attacks the scaffold rather than the model, and the reason §04 of this page has four honest holes in it.",
       repos: ["high-concurrency-booking-engine · 23 Oct", "digital-wallet-ledger-service · 23 Oct", "distributed-workflow-engine · 23 Oct", "quillback · 30 Oct — v0.1.0 released"] }
   ],
 
@@ -253,17 +253,145 @@ window.SITE = {
     }
   },
 
+  /* ── Dossier: the human behind the handle (from the résumé, 2026-11) ─── */
+  dossier: {
+    name: "MD SAAD",
+    titleEn: "Cybersecurity Engineer — Security Operations, Detection Engineering & AI Agent Security",
+    titleZh: "网络安全工程师 — 安全运营、检测工程与 AI 智能体安全",
+    location: "Bhadreswar, West Bengal, India",
+    email: "Hackwithsaad@gmail.com",
+    phone: "+91 6291773764",
+    phoneWhere: "on the printed résumé only — a phone number on a public page is a phishing starter kit",
+    introEn: [
+      "I am MD SAAD — a cybersecurity engineer working the seam where autonomous AI agents meet enterprise control systems. In professional practice I run detection and response inside a 24×7 security operations centre: SIEM tuning, threat hunting, forensic investigation, malware analysis and compliance management under defined SLAs. In the open I build the tools I wished I had on shift — an offline red-team harness for agent scaffolds, an autonomous hunting pipeline with explainable forensics, a secret scanner that publishes its own error rate.",
+      "Three years across SOC operations, offensive security and compliance taught me the same lesson from both sides of the table: a control you cannot demonstrate is a control you do not have. So the work ships with its refutation attached — adversarial counterparts, benchmark gates, calibrated false-positive rates — and this page claims nothing a recruiter cannot verify, in public or on request."
+    ],
+    introZh: [
+      "我是 MD SAAD,一名网络安全工程师,专注于自主 AI 智能体与企业控制系统之间的安全边界。在职业实践中,我于 7×24 小时安全运营中心(SOC)负责检测与响应:SIEM 调优、威胁狩猎、取证调查、恶意软件分析与合规管理,并在既定 SLA 下交付。在开源领域,我构建值班时一直希望拥有的工具:面向智能体脚手架的离线红队测试框架、具备可解释取证能力的自主威胁狩猎流水线,以及公开自身误报率的密钥扫描器。",
+      "三年横跨安全运营、攻击性安全与合规的经历,从谈判桌的两侧教会我同一个道理:无法被证明有效的控制,等于没有控制。因此我的每一项工作都附带其「反证」——对抗性对照、基准门禁、经过校准的误报率;本页面也不作任何招聘方无法核实的陈述,无论公开渠道还是按需索取。"
+    ],
+    interestsEn: "Security operations, threat detection and incident response across enterprise and cloud environments. Resilient SOC capability through proactive threat hunting, malware analysis, red teaming and automation — grounded in MITRE ATT&CK and modern SIEM, XDR and SOAR platforms, in close collaboration with engineering, DevOps and IT.",
+    interestsZh: "聚焦企业与云环境下的安全运营、威胁检测与应急响应;通过主动威胁狩猎、恶意软件分析、红队演练与自动化构建韧性 SOC 能力;以 MITRE ATT&CK 与现代 SIEM、XDR、SOAR 平台为基础,并与工程、DevOps 与 IT 团队紧密协作。",
+    glance: [
+      { k: "3+ yrs", l: "SOC, offensive & compliance operations", lZh: "安全运营、攻防与合规实践", sub: "Mar 2023 → present" },
+      { k: "10",     l: "certifications & career paths",        lZh: "认证与职业路径",       sub: "1 in progress · SC-200" },
+      { k: "24×7",   l: "enterprise SOC coverage, SLA-bound",   lZh: "企业级 SOC 覆盖,受 SLA 约束", sub: "detect · respond · report" },
+      { k: "77%",    l: "BSc cybersecurity, final examination", lZh: "网络安全学士,期末成绩",  sub: "MAKAUT, Kolkata" }
+    ]
+  },
+
+  /* ── Competencies, tagged by the kind of evidence behind each ────────── */
+  skills: [
+    { g: "Security operations", gZh: "安全运营", items: [
+      { n: "SIEM — Splunk, QRadar", ev: "practice" },
+      { n: "XDR / SOAR platforms", ev: "practice" },
+      { n: "Incident response & digital forensics", ev: "practice" },
+      { n: "Threat hunting, MITRE ATT&CK grounded", ev: "evidence", repo: "kql-genie" },
+      { n: "Malware analysis", ev: "practice" },
+      { n: "Detection logic & alert tuning", ev: "evidence", repo: "ai-soc-detection-engine" }
+    ]},
+    { g: "Offensive security", gZh: "攻击性安全", items: [
+      { n: "Red teaming & purple-team exercises", ev: "evidence", repo: "quillback" },
+      { n: "Web / network penetration testing", ev: "practice" },
+      { n: "Vulnerability assessment & reporting", ev: "practice" },
+      { n: "Burp Suite · Nmap · Metasploit · OWASP ZAP", ev: "practice" },
+      { n: "Atomic Red Team", ev: "practice" },
+      { n: "Prompt injection & agent abuse", ev: "evidence", repo: "zero-trust-ai-gateway" }
+    ]},
+    { g: "Cloud & infrastructure", gZh: "云与基础设施", items: [
+      { n: "AWS · Azure security", ev: "practice" },
+      { n: "Firewalls, proxies, VPNs, network protocols", ev: "practice" },
+      { n: "API, web & mobile application security", ev: "practice" },
+      { n: "IaC misconfiguration scanning", ev: "evidence", repo: "plan-guard" },
+      { n: "Zero-trust architecture & RBAC", ev: "evidence", repo: "zero-trust-ai-gateway" }
+    ]},
+    { g: "Automation & engineering", gZh: "自动化与工程", items: [
+      { n: "Python — log parsing, API integration, SOAR automation, IOC enrichment", ev: "evidence", repo: "secret-sweep" },
+      { n: "CI-gated benchmarks & calibration harnesses", ev: "evidence", repo: "secret-sweep" },
+      { n: "FastAPI services, PostgreSQL locking, outbox patterns", ev: "evidence", repo: "high-concurrency-booking-engine" },
+      { n: "SARIF export & GitHub code-scanning integration", ev: "evidence", repo: "quillback" }
+    ]},
+    { g: "Governance & core concepts", gZh: "治理与核心概念", items: [
+      { n: "NIST AI RMF mapping & compliance-as-code", ev: "evidence", repo: "nist-ai-compliance-mapper" },
+      { n: "Encryption, hashing, authentication", ev: "cert" },
+      { n: "Zero Trust, confidentiality, integrity", ev: "cert" },
+      { n: "Secure SDLC & threat modelling", ev: "cert" }
+    ]}
+  ],
+  evLabels: {
+    practice: { en: "professional practice", zh: "职业实践" },
+    evidence: { en: "public evidence",       zh: "公开证据" },
+    cert:     { en: "certified / trained",   zh: "认证 / 受训" }
+  },
+
+  certs: [
+    { n: "Microsoft SC-200 — Security Operations Analyst", org: "Microsoft", when: "in progress" },
+    { n: "Junior Cybersecurity Analyst Career Path", org: "Cisco", when: "Apr 2025" },
+    { n: "Certified Ethical Hacker (CEH)", org: "OneByte", when: "Jan 2023", id: "EHOBL202301658" },
+    { n: "Cybersecurity Job Simulation", org: "Mastercard · Forage", when: "Nov 2023", id: "h4zs3y8a2DxAHoaRf" },
+    { n: "Become an Ethical Hacker", org: "LinkedIn", when: "Oct 2023" },
+    { n: "Career Essentials in Cybersecurity", org: "Microsoft · LinkedIn", when: "Oct 2023" },
+    { n: "Cybersecurity Compliance Framework & System Administration", org: "Coursera", when: "Mar 2023" },
+    { n: "Network Security & Database Vulnerabilities", org: "Coursera", when: "Mar 2023" },
+    { n: "Introduction to Cybersecurity Tools & Cyber Attacks", org: "Coursera", when: "Feb 2023" },
+    { n: "Learning Threat Modeling for Security Professionals", org: "LinkedIn", when: "Dec 2022" }
+  ],
+  edu: {
+    deg: "BSc in Cybersecurity",
+    school: "Maulana Abul Kalam Azad University of Technology",
+    place: "Kolkata, India",
+    when: "Jan 2022 – Jan 2024",
+    score: "77% final examination score"
+  },
+
+  /* ── Experience: exact roles, exact dates, names withheld on purpose ─── */
+  experience: [
+    { role: "Cybersecurity Engineer — Lead Analyst & Compliance Manager",
+      when: "Mar 2025 – present", mode: "remote · 24×7 enterprise SOC",
+      bullets: [
+        "Monitor, detect and respond to security incidents under defined policies and SLAs; lead compliance-management initiatives alongside analyst duties.",
+        "Forensic investigation and malware analysis during active incidents; threat hunting, vulnerability assessment and red-team activity across enterprise networks, AWS, Azure and web/mobile applications.",
+        "Configure and tune SIEM, XDR and SOAR for detection fidelity — fewer false positives, faster response — and own the feedback loop into detection logic.",
+        "Python automation for SOC workflows: IOC enrichment, log correlation, alert triage and ticket generation.",
+        "Purple-team exercises with DevOps and engineering; mentoring of junior analysts to raise SOC maturity."
+      ],
+      muscle: ["ai-soc-detection-engine", "kql-genie", "secret-sweep"] },
+    { role: "SOC Analyst — ServiceNow automation · Azure red-team assistant",
+      when: "Jan 2024 – May 2024", mode: "remote · managed security service",
+      bullets: [
+        "Ran SOC analyst shifts: triage, escalation and incident documentation inside SLA.",
+        "Built ServiceNow automation for triage and ticketing, cutting manual handling per alert.",
+        "Assisted Azure red-team operations; authored an internal assistant application for cloud attack-path validation."
+      ],
+      muscle: ["zero-trust-ai-gateway"] },
+    { role: "Junior Cybersecurity Analyst — penetration testing & IR playbooks",
+      when: "Mar 2023 – Dec 2024", mode: "internship → junior analyst",
+      bullets: [
+        "Network and web-application penetration testing: SQL injection, XSS and security misconfigurations, with risk-analysed reports and remediation guidance.",
+        "Hands-on engagements with Burp Suite, Nmap, Metasploit and OWASP ZAP.",
+        "Vulnerability scanning and risk assessment across client environments; co-authored security policies, procedures and incident-response playbooks."
+      ],
+      muscle: ["Phish-Guard", "plan-guard"] }
+  ],
+  expNote: {
+    en: "Employer names are deliberately absent from this portfolio. Companies change; the work does not. Roles, dates and scope above are exact — verified references and full company details on request, and every technical claim links to public evidence where public evidence exists.",
+    zh: "本作品集刻意不列雇主名称:公司会变,作品不会。上述职位、时间与职责范围均真实准确;如需核实,可提供证明人与完整任职信息;所有技术主张在存在公开证据之处均附链接。"
+  },
+
   /* ── Command palette targets ──────────────────────────────────────────── */
   nav: [
-    { id: "hero",     k: "00", label: "Identity" },
-    { id: "thesis",   k: "01", label: "thesis" },
-    { id: "work",     k: "02", label: "work" },
-    { id: "coverage", k: "03", label: "coverage" },
-    { id: "lab",      k: "04", label: "proof lab" },
-    { id: "controls", k: "05", label: "controls" },
-    { id: "systems",  k: "06", label: "systems" },
-    { id: "ledger",   k: "07", label: "ledger" },
-    { id: "path",     k: "08", label: "path" },
-    { id: "contact",  k: "09", label: "contact" }
+    { id: "hero",        k: "00", label: "identity",   hd: false },
+    { id: "dossier",     k: "01", label: "dossier",    hd: true  },
+    { id: "thesis",      k: "02", label: "thesis",     hd: false },
+    { id: "work",        k: "03", label: "work",       hd: true  },
+    { id: "coverage",    k: "04", label: "coverage",   hd: false },
+    { id: "lab",         k: "05", label: "proof lab",  hd: true  },
+    { id: "credentials", k: "06", label: "credentials",hd: true  },
+    { id: "experience",  k: "07", label: "experience", hd: true  },
+    { id: "controls",    k: "08", label: "controls",   hd: false },
+    { id: "systems",     k: "09", label: "systems",    hd: false },
+    { id: "ledger",      k: "10", label: "ledger",     hd: true  },
+    { id: "path",        k: "11", label: "path",       hd: false },
+    { id: "contact",     k: "12", label: "contact",    hd: true  }
   ]
 };

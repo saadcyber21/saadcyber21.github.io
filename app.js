@@ -886,10 +886,92 @@
     });
   }
 
+  /* ── 9b. dossier · credentials · experience (résumé layer) ──────────── */
+  var LANG = "en";
+  function L(obj, en) { return LANG === "zh" ? (obj[en + "Zh"] || obj[en]) : obj[en]; }
+
+  function initDossier() {
+    var d = S.dossier;
+    $("#dosLoc").textContent = d.location;
+    $("#dosMail").textContent = d.email;
+    renderDossier();
+    $$(".langsw button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        LANG = b.getAttribute("data-lang");
+        $$(".langsw button").forEach(function (o) { o.classList.toggle("on", o === b); });
+        renderDossier(); renderSkills(); renderExperience();
+        toast(LANG === "zh" ? "简介已切换为中文" : "introduction switched to English");
+      });
+    });
+    var pb = $("#printBtn");
+    if (pb) pb.addEventListener("click", function () { window.print(); });
+  }
+  function renderDossier() {
+    var d = S.dossier;
+    $("#dosTitle").textContent = L(d, "title");
+    var intro = $("#dosIntro");
+    intro.className = LANG === "zh" ? "zh" : "";
+    intro.innerHTML = (LANG === "zh" ? d.introZh : d.introEn).map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+    $("#dosIntLabel").textContent = LANG === "zh" ? "职业兴趣" : "professional interests";
+    $("#dosInterests").textContent = L(d, "interests");
+    $("#glance").innerHTML = d.glance.map(function (g) {
+      return '<div class="g"><div class="k">' + esc(g.k) + '</div><div class="l">' + esc(LANG === "zh" ? g.lZh : g.l) +
+        '</div><div class="sub">' + esc(g.sub) + '</div></div>';
+    }).join("");
+  }
+
+  function initSkills() { renderSkills(); }
+  function renderSkills() {
+    var host = $("#skills"); if (!host) return;
+    host.innerHTML = S.skills.map(function (g) {
+      return '<div class="skg"><h4>' + esc(LANG === "zh" ? g.gZh : g.g) + ' <s>' + g.items.length + '</s></h4><ul>' +
+        g.items.map(function (it) {
+          var lb = S.evLabels[it.ev][LANG === "zh" ? "zh" : "en"];
+          var tag = it.ev === "evidence" && it.repo
+            ? '<a class="evtag evidence" href="https://github.com/saadcyber21/' + it.repo + '" target="_blank" rel="noopener noreferrer" title="' + it.repo + '">' + lb + ' ↗</a>'
+            : '<span class="evtag ' + it.ev + '">' + lb + '</span>';
+          return '<li><span>' + esc(it.n) + '</span>' + tag + '</li>';
+        }).join("") + '</ul></div>';
+    }).join("");
+    var cc = $("#certCount"); if (cc) cc.textContent = S.certs.length;
+    $("#certs").innerHTML = S.certs.map(function (c) {
+      return '<li><span><span class="cn">' + esc(c.n) + '</span>' +
+        '<span class="co" style="display:block">' + esc(c.org) + (c.id ? ' · <span class="cid">ID ' + esc(c.id) + '</span>' : '') + '</span></span>' +
+        '<span class="cw' + (c.when === "in progress" ? " prog" : "") + '">' + esc(c.when) + '</span></li>';
+    }).join("");
+    var e = S.edu;
+    $("#edu").innerHTML = '<div class="deg">' + esc(e.deg) + '</div>' +
+      '<div class="sch">' + esc(e.school) + ' — ' + esc(e.place) + '</div>' +
+      '<div class="meta"><span>' + esc(e.when) + '</span><span><b>' + esc(e.score) + '</b></span></div>';
+  }
+
+  function initExperience() { renderExperience(); }
+  function renderExperience() {
+    var host = $("#xlist"); if (!host) return;
+    $("#expNote").textContent = S.expNote[LANG];
+    host.innerHTML = S.experience.map(function (x) {
+      return '<article class="xentry rv in">' +
+        '<div class="xwhen"><div class="wr">' + esc(x.when) + '</div><div class="wm">' + esc(x.mode) + '</div>' +
+        '<span class="anon">' + (LANG === "zh" ? "雇主名称略" : "employer withheld") + '</span></div>' +
+        '<div class="xbody"><h3>' + esc(x.role) + '</h3><ul>' +
+        x.bullets.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join("") + '</ul>' +
+        '<div class="xmuscle"><span class="ml">' + (LANG === "zh" ? "同源公开作品" : "same muscle, in the open") + '</span>' +
+        x.muscle.map(function (m) {
+          return '<a href="https://github.com/saadcyber21/' + m + '" target="_blank" rel="noopener noreferrer">' + m + ' ↗</a>';
+        }).join("") + '</div></div></article>';
+    }).join("");
+    var pc = $("#printContact");
+    if (pc) pc.innerHTML =
+      '<b>' + esc(S.dossier.name) + '</b> — ' + esc(S.dossier.titleEn) + '<br>' +
+      esc(S.dossier.location) + ' · ' + esc(S.dossier.email) + ' · ' + esc(S.dossier.phone) + '<br>' +
+      'github.com/saadcyber21 · saadcyber21.github.io<br>' +
+      '<span style="color:#555">References, engagement letters and full employer details available on request.</span>';
+  }
+
   /* ── 10. nav, palette, motion ───────────────────────────────────────── */
   function initNav() {
     var nav = $("#nav"); if (!nav) return;
-    nav.innerHTML = S.nav.filter(function (n) { return n.id !== "hero"; }).map(function (n) {
+    nav.innerHTML = S.nav.filter(function (n) { return n.hd && n.id !== "hero"; }).map(function (n) {
       return '<a href="#' + n.id + '" data-t="' + n.id + '">' + n.label + '</a>';
     }).join("");
   }
@@ -1063,6 +1145,7 @@
     var av = $("#avatar"); if (av) av.style.backgroundImage = 'url("' + S.meta.avatar + '")';
     initNav(); initPrinciples(); initDossiers(); initRing();
     initSecretLab(); initGateway(); initCalib();
+    initDossier(); initSkills(); initExperience();
     initCards(); initSystems(); initLedger(); initTimeline(); initContact();
     initPalette(); initMotion(); initField();
     runBoot();

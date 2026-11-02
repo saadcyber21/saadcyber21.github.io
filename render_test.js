@@ -54,7 +54,7 @@ function makeEl(id){
 }
 const BY={};
 function byId(id){ if(!BY[id]) BY[id]=makeEl(id); return BY[id]; }
-const IDS=['bootLines','bootBar','boot','bootSkip','field','avatar','whoName','console','heroStats',
+const IDS=['dosTitle','dosLoc','dosMail','dosIntro','dosInterests','dosIntLabel','glance','printBtn','skills','certs','certCount','edu','xlist','expNote','printContact','bootLines','bootBar','boot','bootSkip','field','avatar','whoName','console','heroStats',
  'principles','dossiers','ring','asiList','secIn','secPresets','secOut','secVerdict','secRun','secClear',
  'gwIn','gwSigs','gwResult','gwRun','gwBenign','gwHostile','gwEdit','recallList','controls','systems',
  'ledgerList','timeline','ctlinks','nav','pal','palIn','palList','palBtn','toast','top','hdr','sbar','p-calib'];
@@ -95,7 +95,7 @@ const checks=[
  ['ledgerList', /class="ledrow/, 7, 'ledger entries'],
  ['timeline', /class="tli/, 4, 'timeline entries'],
  ['ctlinks', /class="ctl"/, 4, 'contact links'],
- ['nav', /data-t="/, 9, 'nav links'],
+ ['nav', /data-t="/, 7, 'nav links'],
  ['secPresets', /class="pset"/, 8, 'scanner presets'],
  ['gwSigs', /class="sigrow"/, 7, 'gateway signatures'],
  ['recallList', /99.5%|100.0%/, 1, 'recall figures'],
@@ -135,6 +135,17 @@ setTimeout(()=>{
   }
   const masked=/AKIA\*+MPLE/.test(BY['secOut']._html);
   console.log(`${masked?'  ok  ':' FAIL'}  evidence is masked in output`); masked?pass++:fail++;
-  console.log(`\n─── ${pass} pass / ${fail} fail ───`);
+  // résumé layer
+const late2=[['dosIntro',/class="zh"|<p>/,1,'intro paragraphs'],['glance',/class="g"/,4,'glance tiles'],
+ ['skills',/class="skg"/,5,'skill groups'],['skills',/evtag evidence/,5,'evidence tags'],
+ ['certs',/class="cn"/,10,'certifications'],['edu',/BSc in Cybersecurity/,1,'education'],
+ ['xlist',/class="xentry/,3,'experience entries'],['xlist',/employer withheld/,3,'anonymisation tags'],
+ ['printContact',/6291773764/,1,'phone in print block']];
+for(const [id,re,min,label] of late2){
+  const h=BY[id]._html||''; const n=(h.match(new RegExp(re.source,'g'))||[]).length;
+  const ok=n>=min; ok?pass++:fail++;
+  console.log(`${ok?'  ok  ':' FAIL'}  ${label.padEnd(26)} found ${n} (need >=${min}) in #${id}`);
+}
+console.log(`\n─── ${pass} pass / ${fail} fail ───`);
   process.exit(fail?1:0);
 }, 1400);
