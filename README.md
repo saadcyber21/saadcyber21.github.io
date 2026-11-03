@@ -3,7 +3,11 @@
 Portfolio for [@saadcyber21](https://github.com/saadcyber21) — AI agent scaffold security.
 
 Static. No framework, no build step, no tracker, no analytics, no CDN, no webfont
-requests. Four files and an avatar; everything else is generated from the GitHub API.
+requests. Four files; every fact is generated from the GitHub API or stated by hand.
+
+Design: a paper-and-ink editorial dossier — numbered sections, hairline rules, one
+oxblood accent, system serif/sans/mono only. Light by default with an automatic
+night variant; it prints as a document.
 
 ## Layout
 
@@ -20,7 +24,7 @@ there — the renderers in `app.js` read from `window.SITE` and nothing else.
 
 ## The proof lab
 
-Section 04 runs three algorithms in the browser:
+Section 05 runs three algorithms in the browser:
 
 1. **entropy detector** — a port of `secret-sweep`'s documented detection logic:
    fifteen pattern rules (authoritative, run first) then an entropy layer using
@@ -34,7 +38,7 @@ Section 04 runs three algorithms in the browser:
    command that reproduces them.
 
 These are **reimplementations, not the shipped artefacts**. The real tools are
-Python; the page says so in the honest ledger (§07) rather than letting a visitor
+Python; the page says so in the honest ledger (§09) rather than letting a visitor
 assume they are running `scanner.py`.
 
 `window.__lab` exposes the detection functions so they can be exercised outside a

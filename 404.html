@@ -3,71 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>404 — no such route · saadcyber21</title>
+<title>404 — no such route · MD SAAD</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2305070a'/%3E%3Crect x='7' y='7' width='18' height='18' rx='3' fill='none' stroke='%23ff5c5c' stroke-width='2'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1' fill='%23ff5c5c'/%3E%3C/svg%3E">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F7F4EE'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%238E1F2F' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%238E1F2F' stroke-width='.75'/%3E%3Ctext x='16' y='20.5' font-family='Georgia,serif' font-size='11' text-anchor='middle' fill='%238E1F2F'%3EMS%3C/text%3E%3C/svg%3E">
 <style>
   :root{
-    --ink:#05070a; --fg:#e6ebf2; --fg2:#9aa7b6; --fg3:#61707f;
-    --red:#ff5c5c; --sig:#5eead4; --line:rgba(255,255,255,.09);
-    --mono:"JetBrains Mono","SF Mono",SFMono-Regular,"Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
-    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --paper:#F7F4EE; --paper-2:#FCFAF6; --paper-3:#F1EDE4;
+    --ink:#191B1F; --ink-2:#3D4147; --muted:#6B6E74; --faint:#97958C;
+    --rule:#DED9CD; --rule-2:#C9C3B3; --accent:#8E1F2F;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#141519; --paper-2:#1A1B20; --paper-3:#202127;
+      --ink:#EAE6DC; --ink-2:#C6C2B7; --muted:#9B978C; --faint:#6D6A61;
+      --rule:#2C2D33; --rule-2:#3D3E45; --accent:#D98A93;
+    }
   }
   *{box-sizing:border-box}
   body{
-    margin:0;min-height:100svh;background:var(--ink);color:var(--fg);
-    font-family:var(--mono);display:grid;place-items:center;padding:28px;
-    -webkit-font-smoothing:antialiased;position:relative;overflow:hidden;
+    margin:0;min-height:100svh;background:var(--paper);color:var(--ink-2);
+    font-family:var(--sans);display:grid;place-items:center;padding:28px;
+    -webkit-font-smoothing:antialiased;
   }
-  body::before{
-    content:"";position:absolute;inset:0;
-    background:
-      linear-gradient(to right,rgba(255,255,255,.022) 1px,transparent 1px) 0 0/68px 68px,
-      linear-gradient(to bottom,rgba(255,255,255,.022) 1px,transparent 1px) 0 0/68px 68px,
-      radial-gradient(80% 60% at 50% 0%,rgba(255,92,92,.07),transparent 62%);
-    -webkit-mask-image:radial-gradient(110% 85% at 50% 40%,#000 20%,transparent 80%);
-            mask-image:radial-gradient(110% 85% at 50% 40%,#000 20%,transparent 80%);
-  }
-  .box{position:relative;width:min(620px,100%);border:1px solid var(--line);
-    background:rgba(11,15,21,.8);border-radius:5px;padding:34px 32px 30px;
-    box-shadow:0 40px 100px -50px #000}
-  .bar{display:flex;align-items:center;gap:9px;font-size:10.5px;letter-spacing:.15em;
-    text-transform:uppercase;color:var(--fg3);border-bottom:1px solid var(--line);
-    padding-bottom:13px;margin-bottom:24px}
-  .lamp{width:7px;height:7px;border-radius:50%;background:var(--red);
-    box-shadow:0 0 0 0 rgba(255,92,92,.5);animation:p 2.4s infinite}
-  @keyframes p{0%{box-shadow:0 0 0 0 rgba(255,92,92,.45)}70%{box-shadow:0 0 0 8px rgba(255,92,92,0)}100%{box-shadow:0 0 0 0 rgba(255,92,92,0)}}
-  h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,7vw,58px);
-    line-height:1.05;letter-spacing:-.03em;margin:0 0 20px}
-  h1 i{color:var(--red);font-style:italic}
-  pre{margin:0 0 22px;font-size:12.2px;line-height:1.95;color:var(--fg2);
-    white-space:pre-wrap;word-break:break-word}
-  pre b{color:var(--fg);font-weight:400}
-  pre .k{color:var(--fg3)}
-  pre .r{color:var(--red)}
-  a.btn{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.13em;
-    text-transform:uppercase;padding:13px 22px;border-radius:3px;text-decoration:none;
-    background:var(--sig);color:#03110e;border:1px solid var(--sig);transition:.25s}
-  a.btn:hover{box-shadow:0 0 0 1px var(--sig),0 8px 30px -8px rgba(94,234,212,.55);transform:translateY(-1px)}
-  a.btn.g{background:transparent;color:var(--fg2);border-color:var(--line);margin-left:10px}
-  a.btn.g:hover{color:var(--sig);border-color:rgba(94,234,212,.4);box-shadow:none}
-  .foot{margin-top:26px;padding-top:16px;border-top:1px dashed var(--line);
-    font-size:10.6px;line-height:1.9;color:var(--fg3)}
-  .foot a{color:var(--fg2);border-bottom:1px solid var(--line)}
-  .foot a:hover{color:var(--sig)}
+  .box{width:min(640px,100%);background:var(--paper-2);border:1px solid var(--rule);
+    border-top:3px solid var(--ink);border-radius:2px;padding:38px 36px 32px}
+  .kicker{font:11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent);margin:0 0 16px}
+  h1{font:400 clamp(32px,6vw,50px)/1.08 var(--serif);color:var(--ink);margin:0 0 22px}
+  h1 i{color:var(--accent)}
+  pre{margin:0 0 26px;font:12.5px/1.95 var(--mono);color:var(--muted);
+    background:var(--paper-3);border:1px solid var(--rule);border-left:3px solid var(--ink);
+    border-radius:2px;padding:14px 16px;white-space:pre-wrap;word-break:break-word}
+  pre b{color:var(--ink);font-weight:400}
+  pre .r{color:var(--accent);font-weight:600}
+  .row{display:flex;flex-wrap:wrap;gap:10px}
+  a.btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+    font:11.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);background:transparent;border:1px solid var(--accent);
+    border-radius:2px;padding:12px 19px;text-decoration:none;transition:background .18s,color .18s}
+  a.btn:hover{background:var(--accent);color:var(--paper-2)}
+  a.btn.g{color:var(--ink);border-color:var(--rule-2)}
+  a.btn.g:hover{background:var(--ink);border-color:var(--ink);color:var(--paper-2)}
+  .foot{margin-top:28px;padding-top:16px;border-top:1px dashed var(--rule-2);
+    font:12.5px/1.8 var(--sans);color:var(--muted)}
+  .foot a{color:var(--accent)}
 </style>
 </head>
 <body>
 <div class="box">
-  <div class="bar"><span class="lamp"></span> 404 · route not found</div>
+  <p class="kicker">404 · route not found</p>
   <h1>This path does not<br><i>resolve.</i></h1>
-<pre><span class="k">$</span> GET <b id="pth">—</b>
+<pre>$ GET <b id="pth">—</b>
 <span class="r">404</span> Not Found
-<span class="k">→</span> no handler registered for this route.
-<span class="k">→</span> the site is a single page; there are no sub-routes to miss.</pre>
-  <div>
-    <a class="btn" href="/">back to the portfolio <span aria-hidden="true">→</span></a>
-    <a class="btn g" href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github <span aria-hidden="true">↗</span></a>
+→ no handler registered for this route.
+→ the dossier is a single page; there are no sub-routes to miss.</pre>
+  <div class="row">
+    <a class="btn" href="/">back to the dossier →</a>
+    <a class="btn g" href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github ↗</a>
   </div>
   <div class="foot">
     If you followed a link from here that should exist, it is a bug —

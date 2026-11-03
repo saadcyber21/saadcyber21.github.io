@@ -3,487 +3,367 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="dark">
-<title>MD SAAD (saadcyber21) — AI agent security, with the error rates published</title>
-<meta name="description" content="Security tooling for AI agent scaffolds: an offline red-team harness, an autonomous SOC pipeline, a calibrated secret scanner and a zero-trust tool-call gateway. Every claim on this page links to the command that reproduces it.">
+<meta name="color-scheme" content="light dark">
+<title>MD SAAD — Cybersecurity Engineer · Dossier</title>
+<meta name="description" content="Professional dossier of MD SAAD, cybersecurity engineer: security operations, detection engineering and AI agent security. Every claim links to the command or corpus that reproduces it.">
 <meta name="author" content="MD SAAD">
 <meta name="keywords" content="cybersecurity engineer, SOC analyst, detection engineering, AI agent security, red team, MD SAAD, saadcyber21">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://saadcyber21.github.io/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="MD SAAD (saadcyber21) — AI agent security, with the error rates published">
-<meta property="og:description" content="A detector that cannot be shown to stop detecting is not a detector. Red-team harnesses, SOC pipelines and calibrated scanners for AI agent scaffolds.">
+<meta property="og:title" content="MD SAAD — Cybersecurity Engineer · Dossier">
+<meta property="og:description" content="Security operations, detection engineering and AI agent security. Evidence over adjectives: every claim on this page links to what reproduces it.">
 <meta property="og:url" content="https://saadcyber21.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/124501567?v=4&size=512">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2305070a'/%3E%3Crect x='7' y='7' width='18' height='18' rx='3' fill='none' stroke='%235eead4' stroke-width='2'/%3E%3Crect x='13' y='13' width='6' height='6' rx='1' fill='%235eead4'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F7F4EE'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%238E1F2F' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%238E1F2F' stroke-width='.75'/%3E%3Ctext x='16' y='20.5' font-family='Georgia,serif' font-size='11' text-anchor='middle' fill='%238E1F2F'%3EMS%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 <script>document.documentElement.className="js";</script>
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-<div class="scrollbar" id="sbar" aria-hidden="true"></div>
 
-<!-- ══ BOOT SEQUENCE ══════════════════════════════════════════════════ -->
-<div id="boot" role="status" aria-live="polite" aria-label="Loading">
-  <div class="boot-box">
-    <div class="boot-head">saadcyber21 · portfolio build · integrity check</div>
-    <div id="bootLines"></div>
-    <div class="boot-bar"><i id="bootBar"></i></div>
-  </div>
-</div>
-<button id="bootSkip" type="button">skip intro ↵</button>
+<a class="skip" href="#profile">Skip to content</a>
 
-<!-- ══ HEADER ═════════════════════════════════════════════════════════ -->
+<!-- ═══ header ═══════════════════════════════════════════════════════ -->
 <header id="hdr">
-  <div class="wrap hd">
-    <a class="mark" href="#hero" aria-label="Home">
-      <span class="glyph" aria-hidden="true"></span>
-      <b>saadcyber21</b><span>/ portfolio</span>
-    </a>
-    <nav class="pn" id="nav" aria-label="Sections"></nav>
-    <div class="live" title="Repository data pulled from the GitHub REST API on 2026-11-03">
-      <span class="dot" aria-hidden="true"></span><span>data&nbsp;·&nbsp;2026-11-03</span>
-    </div>
-    <button class="hbtn" id="palBtn" type="button" aria-label="Open command palette">
-      jump <kbd>⌘K</kbd>
+  <div class="hwrap">
+    <a class="brand" href="#masthead" aria-label="MD SAAD — top of page">MD&nbspSAAD</a>
+    <nav id="nav" aria-label="Sections"></nav>
+    <button id="palBtn" type="button" aria-label="Open command palette">
+      <span class="palhint">index</span><kbd>⌘K</kbd>
     </button>
   </div>
 </header>
 
 <main>
-<!-- ══ 00 · IDENTITY ══════════════════════════════════════════════════ -->
-<section id="hero">
-  <canvas id="field" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="ident rv">
-          <div class="avatar" id="avatar" role="img" aria-label="GitHub avatar"></div>
-          <div class="who">
-            <b id="whoName">MD SAAD</b> <i style="color:var(--fg-3)">/ saadcyber21</i><br>
-            <i>github.com/saadcyber21 · account since Feb 2023</i>
-          </div>
-        </div>
 
-        <h1 class="name"><span class="sc" data-text="Agent">Agent</span><br>
-          <span class="thin sc" data-text="security,">security,</span><br>
-          <span class="sc" data-text="measured.">measured.</span></h1>
-
-        <p class="role rv" data-d="1">
-          <span>AI&nbsp;Security&nbsp;Engineering</span><span class="sep">/</span>
-          <span class="alt">Adversarial&nbsp;Testing</span><span class="sep">/</span>
-          <span class="alt">Detection&nbsp;Engineering</span>
+<!-- ═══ masthead ═════════════════════════════════════════════════════ -->
+<section id="masthead" aria-label="Masthead">
+  <div class="wrap mast">
+    <div class="mast-rule" aria-hidden="true"></div>
+    <div class="mast-grid">
+      <div class="mast-main">
+        <p class="mast-kicker">Professional dossier · <span id="mastBuild"></span></p>
+        <h1 class="mast-name">MD&nbsp;SAAD</h1>
+        <p class="mast-title" id="mastTitle"></p>
+        <p class="mast-meta">
+          <span id="mastLoc"></span><i aria-hidden="true">·</i>
+          <a id="mastMail" href="mailto:Hackwithsaad@gmail.com"></a><i aria-hidden="true">·</i>
+          <a href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github.com/saadcyber21</a>
         </p>
-
-        <blockquote class="thesis-quote rv" data-d="2" id="tquote">
-          “A detector that cannot be shown to stop detecting is not a detector.”
-          <span class="q2">So every project here ships with an adversarial counterpart, or a benchmark gate that fails the build. Agents now hold tools, memory and delegated credentials — which makes the scaffold around the model an attack surface in its own right, and the part most teams own but test least.</span>
+        <blockquote class="epigraph">
+          <p id="epigraphText"></p>
+          <footer>— operating principle, applied to every project below</footer>
         </blockquote>
-
-        <div class="hero-cta rv" data-d="3">
-          <a class="btn" href="#work" data-scroll>Read the work <span class="ar" aria-hidden="true">→</span></a>
-          <a class="btn ghost" href="#lab" data-scroll>Run the proof lab <span class="ar" aria-hidden="true">↘</span></a>
-          <a class="btn ghost" href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">GitHub <span class="ar" aria-hidden="true">↗</span></a>
+        <div class="mast-actions">
+          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Résumé <span class="ar" aria-hidden="true">↓</span></a>
+          <a class="btn" href="https://github.com/saadcyber21" target="_blank" rel="noopener">GitHub</a>
+          <button class="btn" id="printBtn" type="button">Print dossier</button>
         </div>
       </div>
-
-      <aside class="console rv" data-d="2" aria-label="Repository telemetry">
-        <div class="cbar"><span class="lamp" aria-hidden="true"></span> telemetry · github api · read-only</div>
-        <div class="cbody" id="console"></div>
-      </aside>
+      <div class="mast-seal" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <defs>
+            <path id="sealTop" d="M 100,100 m -72,0 a 72,72 0 1,1 144,0"/>
+            <path id="sealBot" d="M 100,100 m -72,0 a 72,72 0 1,0 144,0"/>
+          </defs>
+          <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="100" cy="100" r="82" fill="none" stroke="currentColor" stroke-width="0.75"/>
+          <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" stroke-width="0.75"/>
+          <text font-size="12.2" letter-spacing="3" fill="currentColor">
+            <textPath href="#sealTop" startOffset="50%" text-anchor="middle">EVIDENCE OVER ADJECTIVES</textPath>
+          </text>
+          <text font-size="12.2" letter-spacing="3" fill="currentColor">
+            <textPath href="#sealBot" startOffset="50%" text-anchor="middle">MD SAAD · MMXXVI</textPath>
+          </text>
+          <text x="100" y="109" text-anchor="middle" font-size="30" letter-spacing="2" fill="currentColor" style="font-family:var(--serif)">MS</text>
+          <line x1="66" y1="100" x2="80" y2="100" stroke="currentColor" stroke-width="0.75"/>
+          <line x1="120" y1="100" x2="134" y2="100" stroke="currentColor" stroke-width="0.75"/>
+        </svg>
+      </div>
     </div>
-
-    <div class="hero-stats rv" data-d="4" id="heroStats"></div>
+    <div class="strip" id="evStrip" aria-label="Key figures, with sources"></div>
+    <p class="prov" id="mastProv"></p>
   </div>
 </section>
 
-<!-- ══ 01 · DOSSIER ═══════════════════════════════════════════════════ -->
-<section id="dossier">
+<!-- ═══ §01 profile ══════════════════════════════════════════════════ -->
+<section id="profile" aria-labelledby="profile-h">
   <div class="wrap">
-    <div class="dos-head">
-      <div>
-        <p class="kicker rv"><b>01</b> — dossier</p>
-        <h2 class="dos-name rv" data-d="1">MD SAAD</h2>
-        <p class="dos-title rv" data-d="2" id="dosTitle"></p>
-        <p class="dos-meta rv" data-d="2">
-          <span>based in <b id="dosLoc"></b></span><span class="sep">·</span>
-          <a id="dosMail" href="mailto:Hackwithsaad@gmail.com"></a><span class="sep">·</span>
-          <a href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github.com/saadcyber21 ↗</a>
-        </p>
-      </div>
-      <div class="langsw rv" data-d="3" role="group" aria-label="Introduction language">
-        <button type="button" class="on" data-lang="en">EN</button><button type="button" data-lang="zh">中文</button>
+    <div class="sechead rv">
+      <p class="kicker">§ 01</p>
+      <h2 id="profile-h">Profile</h2>
+      <div class="langsw" role="group" aria-label="Introduction language">
+        <button type="button" id="langEn" class="on">EN</button>
+        <button type="button" id="langZh">中文</button>
       </div>
     </div>
-
-    <div class="dos-grid">
-      <div class="dos-intro rv" data-d="2">
-        <div id="dosIntro"></div>
-        <div class="dos-interests">
-          <h3 class="lab-h" id="dosIntLabel">professional interests</h3>
-          <p id="dosInterests"></p>
-        </div>
+    <div class="profile-grid">
+      <div class="rv">
+        <div class="prose" id="dosIntro"></div>
+        <h3 class="subhead" id="dosIntLabel"></h3>
+        <p class="body" id="dosInterests"></p>
       </div>
-      <aside class="dos-side rv" data-d="3">
+      <aside class="rv" aria-label="At a glance">
+        <h3 class="subhead">At a glance</h3>
         <div class="glance" id="glance"></div>
-        <div class="dos-actions">
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener" style="width:100%;justify-content:center">one-page résumé · pdf <span class="ar" aria-hidden="true">↗</span></a>
-          <a class="btn ghost" href="resume.html" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:10px">one-page résumé · html <span class="ar" aria-hidden="true">↗</span></a>
-          <button class="btn ghost printbtn" id="printBtn" type="button" style="margin-top:10px">full dossier · print <span class="ar" aria-hidden="true">⎙</span></button>
-          <p class="printnote">The one-pager is the ATS submission document: plain text flow, standard headings, two pages. The print button renders this page as a fuller dossier — light theme, one column, no company names, and the phone number appears there and only there.</p>
+        <div class="aside-note">
+          <p>Full two-page résumé: <a href="resume.html">HTML</a> · <a href="resume.pdf">PDF</a>.<br>
+          Printable version of this dossier: <button type="button" class="linkbtn" id="printBtn2">print</button>.</p>
         </div>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- ══ 01 · THESIS ════════════════════════════════════════════════════ -->
-<section id="thesis">
+<!-- ═══ §02 method ═══════════════════════════════════════════════════ -->
+<section id="method" aria-labelledby="method-h">
   <div class="wrap">
-    <div class="thesis-head">
-      <div>
-        <p class="kicker rv"><b>02</b> — thesis</p>
-        <h2 class="h-sec rv" data-d="1">The scaffold is the<br>attack surface <i>nobody tests.</i></h2>
-      </div>
-      <p class="pull rv" data-d="2">
-        Existing AI red-teaming points attacks at a <b>live model</b> — something you did not write, cannot fix, and pay per run to test non-deterministically. The artefacts you <b>actually own</b> are static: the system prompt is a string, the tool definitions are JSON, the permission logic is code. Static means testable in CI.
-      </p>
+    <div class="sechead rv">
+      <p class="kicker">§ 02</p>
+      <h2 id="method-h">Method</h2>
+      <p class="lede">Three rules every project in this dossier is held to. Each one exists because
+      it was learned the expensive way, and each is enforced by a command, not a slogan.</p>
     </div>
-    <div class="principles" id="principles"></div>
+    <div class="maxims" id="principles"></div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 02 · FLAGSHIP WORK ═════════════════════════════════════════════ -->
-<section id="work">
+<!-- ═══ §03 work ═════════════════════════════════════════════════════ -->
+<section id="work" aria-labelledby="work-h">
   <div class="wrap">
-    <p class="kicker rv"><b>03</b> — flagship work</p>
-    <h2 class="h-sec rv" data-d="1">Four tools. Each one carries<br>its own <i>refutation.</i></h2>
-    <p class="lede rv" data-d="2">
-      Expand a dossier for the claim, the command that reproduces it, and the part that does not work yet.
-      Commit counts and language breakdowns are from the GitHub API; the metrics are from each repository's own calibration harness.
-    </p>
-    <div id="dossiers" style="margin-top:clamp(34px,4vw,52px)"></div>
+    <div class="sechead rv">
+      <p class="kicker">§ 03</p>
+      <h2 id="work-h">Selected work</h2>
+      <p class="lede">Four projects, presented as exhibits: what each claims, how the claim is
+      reproduced, and — stated by the author — what it does not do.</p>
+    </div>
+    <div id="dossiers"></div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 03 · ASI COVERAGE ══════════════════════════════════════════════ -->
-<section id="coverage">
+<!-- ═══ §04 coverage ═════════════════════════════════════════════════ -->
+<section id="coverage" aria-labelledby="coverage-h">
   <div class="wrap">
-    <p class="kicker rv"><b>04</b> — coverage, stated as coverage</p>
-    <h2 class="h-sec rv" data-d="1">quillback against the<br>OWASP ASI <i>Top 10, 2026.</i></h2>
-    <p class="lede rv" data-d="2">
-      Six of ten categories have attacks. Four do not, and the tool prints those four as blind spots on every run
-      instead of implying full coverage. Hover or tap a segment.
-    </p>
+    <div class="sechead rv">
+      <p class="kicker">§ 04</p>
+      <h2 id="coverage-h">Coverage — OWASP Agentic AI Top 10 (2026)</h2>
+      <p class="lede" id="covLede"></p>
+    </div>
+    <div class="rv">
+      <table class="covtable" id="asiTable" aria-describedby="coverage-h">
+        <thead><tr><th scope="col">ID</th><th scope="col">Category</th><th scope="col">Status</th><th scope="col">What is tested / what is missing</th></tr></thead>
+        <tbody id="asiBody"></tbody>
+      </table>
+      <p class="covlegend"><span class="dot cov"></span> covered by at least one attack in the library&emsp;
+      <span class="dot blind"></span> blind spot — no attack yet, printed in every report</p>
+    </div>
+  </div>
+</section>
 
-    <div class="cov">
-      <div class="ringwrap rv" data-d="2">
-        <svg id="ring" viewBox="0 0 400 400" role="img" aria-label="OWASP ASI coverage ring: 6 of 10 categories covered, 4 blind spots"></svg>
-        <div class="ring-center">
-          <div class="rc-n">6<s>/10</s></div>
-          <div class="rc-l">categories covered</div>
+<p class="print-only labnote">The interactive verification lab (§05) is omitted in print —
+it only means something when you can run it. Live: https://saadcyber21.github.io/#verify</p>
+
+<!-- ═══ §05 verification ═════════════════════════════════════════════ -->
+<section id="verify" aria-labelledby="verify-h">
+  <div class="wrap">
+    <div class="sechead rv">
+      <p class="kicker">§ 05</p>
+      <h2 id="verify-h">Verification lab</h2>
+      <p class="lede">Run the algorithms in this browser. The lab is a faithful JavaScript
+      reimplementation of the documented detector logic — same signals, same thresholds, same
+      guards — and is labelled as such; it is not the shipped Python artefact.</p>
+    </div>
+    <div class="lab rv">
+      <div class="tabs" role="tablist" aria-label="Verification demos">
+        <button role="tab" id="t-secret" aria-controls="p-secret" aria-selected="true" class="on" type="button">Secret scanner</button>
+        <button role="tab" id="t-gate" aria-controls="p-gate" aria-selected="false" type="button">Tool-call gateway</button>
+        <button role="tab" id="t-calib" aria-controls="p-calib" aria-selected="false" type="button">Calibration record</button>
+      </div>
+
+      <div class="pane on" id="p-secret" role="tabpanel" aria-labelledby="t-secret">
+        <p class="panenote">The calibrated two-layer detector from <a href="https://github.com/saadcyber21/secret-sweep" target="_blank" rel="noopener noreferrer">secret-sweep</a>:
+        pattern rules first, then an entropy layer with three structural guards. Evidence is masked in the output — this page never prints a full token.</p>
+        <label class="fieldlabel" for="secIn">Input — one config line, or a whole file</label>
+        <textarea class="inp" id="secIn" rows="7" spellcheck="false"></textarea>
+        <div class="presets" id="secPresets"></div>
+        <div class="runrow">
+          <button class="btn primary" id="secRun" type="button">Scan</button>
+          <button class="btn quiet" id="secClear" type="button">Clear</button>
         </div>
+        <ul class="findings" id="secOut" aria-live="polite"></ul>
+        <div class="verdict" id="secVerdict" hidden></div>
       </div>
-      <div class="rv" data-d="3">
-        <ul class="asi-list" id="asiList"></ul>
-        <p class="cov-note">
-          <b>Blind spots:</b> ASI05 unexpected code execution · ASI08 cascading agent failures ·
-          ASI09 human-agent trust exploitation · ASI10 rogue agents.<br>
-          No framework adapters either — you write a <code>Scaffold</code> subclass by hand.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<hr class="rule">
-
-<!-- ══ 04 · PROOF LAB ═════════════════════════════════════════════════ -->
-<section id="lab">
-  <div class="wrap">
-    <p class="kicker rv"><b>05</b> — proof lab · runs in your browser</p>
-    <h2 class="h-sec rv" data-d="1">Don't take the numbers.<br><i>Break them yourself.</i></h2>
-    <p class="lede rv" data-d="2">
-      Three of the algorithms documented in these repositories, reimplemented faithfully in JavaScript so they run here
-      with no backend. Same signals, same thresholds, same structural guards — and the same failure modes.
-    </p>
-
-    <div class="lab-tabs rv" data-d="2" role="tablist" aria-label="Proof lab demos">
-      <button class="lab-tab on" role="tab" aria-selected="true" data-pane="p-secret" type="button">
-        <span class="t">01 · entropy detector</span><span class="s">secret-sweep</span>
-      </button>
-      <button class="lab-tab" role="tab" aria-selected="false" data-pane="p-gate" type="button">
-        <span class="t">02 · tool-call gateway</span><span class="s">zero-trust-ai-gateway</span>
-      </button>
-      <button class="lab-tab" role="tab" aria-selected="false" data-pane="p-calib" type="button">
-        <span class="t">03 · calibration</span><span class="s">measured error rate</span>
-      </button>
-    </div>
-
-    <!-- pane 1 -->
-    <div class="lab-pane on" id="p-secret" role="tabpanel">
-      <p class="lab-note">
-        <b>Reimplementation, not the artefact.</b> The shipped scanner is a single stdlib-only Python file
-        (<code>scanner.py</code>, 56 tests). This is the documented detection logic ported to JS: layer 1 pattern rules,
-        then layer 2 entropy using <code>ratio</code>, <code>coverage</code> and <code>transitions</code> with three
-        structural guards. It also runs the naive <code>entropy &gt; 4.5</code> test it replaced, side by side,
-        so you can watch that one fail.
-      </p>
-      <div class="lab-cols">
-        <div>
-          <h3 class="lab-h">input</h3>
-          <textarea class="inp" id="secIn" rows="7" spellcheck="false" aria-label="Text to scan for secrets"></textarea>
-          <div class="presets" id="secPresets"></div>
-          <div class="presets">
-            <button class="pset" id="secRun" type="button" style="color:var(--sig);border-color:var(--sig-dim)">▶ scan</button>
-            <button class="pset" id="secClear" type="button">clear</button>
+      <div class="pane" id="p-gate" role="tabpanel" aria-labelledby="t-gate" hidden>
+        <p class="panenote">The control plane of <a href="https://github.com/saadcyber21/zero-trust-ai-gateway" target="_blank" rel="noopener noreferrer">zero-trust-ai-gateway</a>:
+        RBAC resolves the role, signature inspection reads the payload, and a refusal is explicit — a 406 with the matched signature — never a silent drop.</p>
+        <div class="presets">
+          <button class="pset" id="gwBenign" type="button">benign tool call</button>
+          <button class="pset warn" id="gwHostile" type="button">indirect prompt injection</button>
+          <button class="pset" id="gwEdit" type="button">edit payload</button>
+        </div>
+        <label class="fieldlabel" for="gwIn">Tool-call payload (JSON)</label>
+        <textarea class="inp" id="gwIn" rows="11" spellcheck="false"></textarea>
+        <div class="runrow">
+          <button class="btn primary" id="gwRun" type="button">Pass through gateway</button>
+        </div>
+        <div class="gwsplit">
+          <div>
+            <h4 class="paneh">Signature table</h4>
+            <div id="gwSigs"></div>
+          </div>
+          <div>
+            <h4 class="paneh">Gateway decision</h4>
+            <div class="gw" id="gwResult" hidden></div>
           </div>
         </div>
-        <div>
-          <h3 class="lab-h">findings</h3>
-          <ul class="findings" id="secOut" aria-live="polite"></ul>
-          <div class="verdict" id="secVerdict" hidden></div>
-        </div>
       </div>
-    </div>
 
-    <!-- pane 2 -->
-    <div class="lab-pane" id="p-gate" role="tabpanel" hidden>
-      <p class="lab-note">
-        <b>What the proxy sees.</b> A support agent calls <code>search_docs</code>. In the hostile case the retrieved
-        document carries an injected instruction block. The gateway validates role policy, then deep-inspects the
-        payload for destructive operations before anything reaches a target system — and answers with an explicit
-        <code>406</code> rather than dropping the call silently, because an unobservable refusal is indistinguishable
-        from no control at all.
-      </p>
-      <div class="presets" style="margin:0 0 20px">
-        <button class="pset" id="gwBenign" type="button">benign tool call</button>
-        <button class="pset" id="gwHostile" type="button" style="color:var(--red);border-color:rgba(255,92,92,.35)">⚠ indirect prompt injection</button>
-        <button class="pset" id="gwEdit" type="button">edit payload</button>
-      </div>
-      <div class="lab-cols">
-        <div>
-          <h3 class="lab-h">intercepted invocation</h3>
-          <textarea class="inp" id="gwIn" rows="11" spellcheck="false" aria-label="Tool call payload"></textarea>
-          <div class="presets"><button class="pset" id="gwRun" type="button" style="color:var(--sig);border-color:var(--sig-dim)">▶ pass through gateway</button></div>
-        </div>
-        <div>
-          <h3 class="lab-h">signature inspection</h3>
-          <div id="gwSigs"></div>
-          <div class="gw" id="gwResult" hidden></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- pane 3 -->
-    <div class="lab-pane" id="p-calib" role="tabpanel" hidden>
-      <p class="lab-note">
-        An entropy detector that flags one line per file gets switched off within a week. So the threshold was measured
-        instead of described — against <span id="calibCorpus">CPython 3.11 stdlib</span>,
-        <b id="calibFiles">669</b> files, <b id="calibLines">304,467</b> lines. Every figure comes from
-        <code>scripts/calibrate.py</code>, which is in the repository rather than in a notebook nobody can reproduce.
-      </p>
-      <div class="lab-cols">
-        <div>
-          <h3 class="lab-h">false positives on the same corpus</h3>
-          <div class="bar-cmp">
-            <div class="bar naive">
-              <span class="bl2">entropy&gt;4.5</span>
-              <span class="track"><i data-w="100"></i></span>
-              <span class="num" data-count="610">0</span>
-            </div>
-            <div class="bar calib">
-              <span class="bl2">calibrated</span>
-              <span class="track"><i data-w="3.8"></i></span>
-              <span class="num" data-count="23">0</span>
-            </div>
+      <div class="pane" id="p-calib" role="tabpanel" aria-labelledby="t-calib" hidden>
+        <p class="panenote">Every number below is produced by
+        <code>python3 scripts/calibrate.py</code> against <span id="calibCorpus"></span> —
+        <b id="calibFiles"></b> files, <b id="calibLines"></b> lines — and re-produced in CI on every commit.</p>
+        <div class="calibgrid">
+          <div class="calibcard">
+            <p class="cl-k">610 → 23</p>
+            <p class="cl-l">lines flagged on the corpus by the naive <code>entropy &gt; 4.5</code> test versus the calibrated detector — 26× less noise, and the naive test still missed real credentials.</p>
           </div>
-          <p class="cov-note" style="margin-top:26px">
-            <b style="color:var(--amber)">26× noisier</b> — and the naive test still missed real credentials, because
-            entropy is bounded above by <code>log2(min(len, alphabet))</code>. A threshold of 4.5
-            <b style="color:var(--red)">cannot fire on any token shorter than 24 characters.</b>
-            An AWS access key ID is 20. Try it in panel 01.
-          </p>
+          <div class="calibcard">
+            <p class="cl-k">0.0076%</p>
+            <p class="cl-l">false-positive rate (23 of 304,467 lines). A detector that cries wolf gets switched off within a week; this one is CI-usable.</p>
+          </div>
+          <div class="calibcard">
+            <p class="cl-k">&lt; 24 chars</p>
+            <p class="cl-l">the structural blind spot that started the project: <code>entropy &gt; 4.5</code> cannot fire below 24 characters, so a 20-character AWS key ID was undetectable by construction.</p>
+          </div>
         </div>
-        <div>
-          <h3 class="lab-h">recall, by leak shape</h3>
-          <ul class="recall-list" id="recallList"></ul>
-          <p class="cov-note" style="margin-top:24px">
-            <b style="color:var(--amber)">Honest reading:</b> the corpus is generated, not harvested.
-            99.5% means “99.5% of the shapes I modelled”, and CI enforces the floor in
-            <code>scripts/check_recall.py</code> so a refactor that quietly breaks detection fails the build
-            rather than surfacing at the next incident review.
-          </p>
-        </div>
+        <h4 class="paneh">Measured recall — planted-secret corpora</h4>
+        <ul class="recall" id="recallList"></ul>
+        <p class="panenote">Corpora are generated, not harvested: 99.5% honestly means “99.5% of the shapes modelled”. Stated in the ledger, §09.</p>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 06 · CREDENTIALS ═══════════════════════════════════════════════ -->
-<section id="credentials">
+<!-- ═══ §06 credentials ══════════════════════════════════════════════ -->
+<section id="credentials" aria-labelledby="credentials-h">
   <div class="wrap">
-    <p class="kicker rv"><b>06</b> — credentials</p>
-    <h2 class="h-sec rv" data-d="1">Competencies, tagged by the<br><i>kind of evidence</i> behind each.</h2>
-    <p class="lede rv" data-d="2">
-      <span class="evtag evidence">public evidence</span> links to a repository that exercises the skill in anger.
-      <span class="evtag practice">professional practice</span> is what the day job runs on — verifiable by reference, not by URL.
-      <span class="evtag cert">certified</span> means a body issued paper. A skills list without tiers is a skills list
-      where everything means nothing.
-    </p>
-    <div class="skgrid" id="skills"></div>
-    <div class="cred-cols">
-      <div class="rv" data-d="1">
-        <h3 class="lab-h">certifications · <span id="certCount"></span></h3>
+    <div class="sechead rv">
+      <p class="kicker">§ 06</p>
+      <h2 id="credentials-h">Credentials</h2>
+      <p class="lede">Competencies are tagged by the kind of evidence behind each: professional
+      practice, a public repository, or formal certification. No unmarked claims.</p>
+    </div>
+    <div class="credgrid">
+      <div class="rv">
+        <h3 class="subhead">Competencies</h3>
+        <div class="skgrid" id="skills"></div>
+      </div>
+      <div class="rv">
+        <h3 class="subhead">Certifications · <span id="certCount"></span></h3>
         <ul class="certlist" id="certs"></ul>
-      </div>
-      <div class="rv" data-d="2">
-        <h3 class="lab-h">education</h3>
+        <h3 class="subhead">Education</h3>
         <div class="edubox" id="edu"></div>
-        <h3 class="lab-h" style="margin-top:30px">why the tiers</h3>
-        <p class="cov-note" style="margin-top:14px">
-          Recruiters at large companies see hundreds of identical skills matrices.
-          The tier is the claim's <b style="color:var(--sig)">verification path</b>: click it, call the reference,
-          or check the certificate ID. Nothing here asks to be taken on faith.
-        </p>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 07 · EXPERIENCE ════════════════════════════════════════════════ -->
-<section id="experience">
+<!-- ═══ §07 experience ═══════════════════════════════════════════════ -->
+<section id="experience" aria-labelledby="experience-h">
   <div class="wrap">
-    <p class="kicker rv"><b>07</b> — experience · names withheld</p>
-    <h2 class="h-sec rv" data-d="1">Three rooms: the SOC floor,<br>the range, <i>the compliance desk.</i></h2>
-    <p class="lede rv" data-d="2" id="expNote"></p>
+    <div class="sechead rv">
+      <p class="kicker">§ 07</p>
+      <h2 id="experience-h">Experience</h2>
+      <p class="lede" id="expNote"></p>
+    </div>
     <div class="xlist" id="xlist"></div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 08 · CONTROL PLANE ═════════════════════════════════════════════ -->
-<section id="controls">
+<!-- ═══ §08 supporting work ══════════════════════════════════════════ -->
+<section id="support" aria-labelledby="support-h">
   <div class="wrap">
-    <p class="kicker rv"><b>08</b> — control plane</p>
-    <h2 class="h-sec rv" data-d="1">Governance, IaC and detection<br>engineering. <i>Zero dependencies, all four.</i></h2>
-    <p class="lede rv" data-d="2">
-      Deliberately stdlib-only so they run in air-gapped and restricted pipelines where heavy scanners and
-      external APIs are not an option. Each has a GitHub Actions workflow behind it.
-    </p>
-    <div class="cgrid" id="controls"></div>
+    <div class="sechead rv">
+      <p class="kicker">§ 08</p>
+      <h2 id="support-h">Supporting work</h2>
+      <p class="lede">Detection-and-control tooling and backend systems, each with its stated
+      limitation. Smaller scope than §03; same standard.</p>
+    </div>
+    <div class="supgrid">
+      <div class="rv">
+        <h3 class="subhead">Control plane &amp; detection engineering</h3>
+        <div id="controls"></div>
+      </div>
+      <div class="rv">
+        <h3 class="subhead">Backend systems</h3>
+        <div id="systems"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 06 · SYSTEMS ═══════════════════════════════════════════════════ -->
-<section id="systems">
+<!-- ═══ §09 limitations ══════════════════════════════════════════════ -->
+<section id="ledger" aria-labelledby="ledger-h">
   <div class="wrap">
-    <p class="kicker rv"><b>09</b> — systems engineering</p>
-    <h2 class="h-sec rv" data-d="1">Built to understand what an agent<br>should be <i>allowed to touch.</i></h2>
-    <p class="lede rv" data-d="2">
-      Concurrency control, double-entry money and workflow durability — the primitives that decide the blast radius
-      when a tool call goes wrong. Each entry states what it does not do.
-    </p>
-    <div class="syslist" id="systems"></div>
-  </div>
-</section>
-
-<hr class="rule">
-
-<!-- ══ 07 · HONEST LEDGER ═════════════════════════════════════════════ -->
-<section id="ledger">
-  <div class="wrap">
-    <p class="kicker rv"><b>10</b> — honest ledger</p>
-    <h2 class="h-sec rv" data-d="1">What this work <i>does not</i> do.</h2>
-    <p class="lede rv" data-d="2">
-      Stated here rather than left for you to find. This includes two entries about this page itself,
-      because a site that demands evidence from its subject should hold itself to the same standard.
-    </p>
+    <div class="sechead rv">
+      <p class="kicker">§ 09</p>
+      <h2 id="ledger-h">Known limitations</h2>
+      <p class="lede">Stated openly, because a portfolio that hides its gaps is marketing.
+      Every row is a fact about this work that a reviewer would otherwise have to discover.</p>
+    </div>
     <div class="led" id="ledgerList"></div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 08 · TRAJECTORY ════════════════════════════════════════════════ -->
-<section id="path">
+<!-- ═══ §10 path ═════════════════════════════════════════════════════ -->
+<section id="path" aria-labelledby="path-h">
   <div class="wrap">
-    <p class="kicker rv"><b>11</b> — trajectory</p>
-    <h2 class="h-sec rv" data-d="1">From pointer arithmetic<br>to <i>agent scaffolds.</i></h2>
+    <div class="sechead rv">
+      <p class="kicker">§ 10</p>
+      <h2 id="path-h">Path</h2>
+      <p class="lede">The order things were built in, and why — from CS50 to the adversarial
+      counterpart of everything before it.</p>
+    </div>
     <div class="tl" id="timeline"></div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ══ 09 · CONTACT ═══════════════════════════════════════════════════ -->
-<section id="contact">
+<!-- ═══ §11 contact ══════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <div class="ct rv">
-      <div>
-        <h2>Security issue in one<br>of these? <i>Report it<br>privately.</i></h2>
-        <p>
-          Open a private vulnerability report rather than a public issue — the same courtesy every maintainer
-          of a security tool needs. For anything else, an issue on the relevant repository is fine and usually faster.
-        </p>
-        <div class="disclose">
-          <h5>responsible use</h5>
-          <p>
-            The attack payloads in these repositories are designed to test systems you own. They are deliberately
-            generic and contain no working exploits against third-party services. Do not point them at anything you
-            do not have written authorisation to test.
-          </p>
-        </div>
-      </div>
-      <div>
-        <div class="ctlinks" id="ctlinks"></div>
-        <div class="print-only" id="printContact"></div>
-      </div>
+    <div class="sechead rv">
+      <p class="kicker">§ 11</p>
+      <h2 id="contact-h">Contact</h2>
     </div>
+    <div class="contact-grid rv">
+      <div>
+        <p class="ct-mail"><a href="mailto:Hackwithsaad@gmail.com" id="ctMail">Hackwithsaad@gmail.com</a></p>
+        <p class="body">Open to security engineering, detection engineering and AI-security roles —
+        and to collaborators who hold their tools to a measurable standard.
+        References, engagement letters and full employer details on request.</p>
+        <div class="ctlinks" id="ctlinks"></div>
+      </div>
+      <div class="print-only" id="printContact"></div>
+    </div>
+    <footer class="colophon" id="colophon"></footer>
   </div>
 </section>
+
 </main>
 
-<footer>
-  <div class="wrap ft">
-    <div>
-      <div>© 2026 saadcyber21 — built by hand, no framework, no tracker, no analytics.</div>
-      <div>Repository data: GitHub REST API, 2026-11-03. <a href="https://github.com/saadcyber21/saadcyber21.github.io" target="_blank" rel="noopener noreferrer">Source of this site</a></div>
-    </div>
-    <div class="keys">
-      <span><kbd>⌘K</kbd> jump</span>
-      <span><kbd>G</kbd> then <kbd>H</kbd> github</span>
-      <span><kbd>/</kbd> focus lab</span>
-      <span><kbd>Esc</kbd> close</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ══ COMMAND PALETTE ════════════════════════════════════════════════ -->
-<div id="pal" role="dialog" aria-modal="true" aria-label="Command palette">
-  <div class="pbox">
-    <input id="palIn" type="text" placeholder="jump to section or repository…" autocomplete="off" spellcheck="false" aria-label="Command palette input">
+<!-- ═══ command palette ══════════════════════════════════════════════ -->
+<div id="pal" role="dialog" aria-modal="true" aria-label="Command palette" hidden>
+  <div class="palbox">
+    <input id="palIn" type="text" placeholder="Jump to a section, project or repository…" autocomplete="off" spellcheck="false" aria-label="Command palette input">
     <div class="plist" id="palList" role="listbox"></div>
-    <div class="pfoot"><span>↑↓ navigate · ↵ open</span><span>esc close</span></div>
+    <p class="palfoot"><kbd>↑↓</kbd> navigate · <kbd>↵</kbd> open · <kbd>esc</kbd> close</p>
   </div>
 </div>
 
 <div id="toast" role="status" aria-live="polite"></div>
-<button id="top" type="button" aria-label="Back to top">
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 12V2M7 2 2.5 6.5M7 2l4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
+<button id="top" type="button" aria-label="Back to top">↑</button>
 
 <script src="data.js"></script>
 <script src="app.js"></script>

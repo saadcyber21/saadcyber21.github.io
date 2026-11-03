@@ -378,20 +378,37 @@ window.SITE = {
     zh: "本作品集刻意不列雇主名称:公司会变,作品不会。上述职位、时间与职责范围均真实准确;如需核实,可提供证明人与完整任职信息;所有技术主张在存在公开证据之处均附链接。"
   },
 
-  /* ── Command palette targets ──────────────────────────────────────────── */
+  /* ── Masthead evidence strip — every tile carries its source ─────────── */
+  evidence: [
+    { k: "3+ yrs", l: "SOC, offensive & compliance operations",
+      src: ["§07 experience", "#experience"] },
+    { k: "{{publicRepos}} · {{totalCommits}}", l: "public repositories · commits, API-verified",
+      src: ["github.com/saadcyber21", "https://github.com/saadcyber21"] },
+    { k: "23 / 304,467", l: "false positives per corpus lines — secret-sweep, measured",
+      src: ["scripts/calibrate.py", "https://github.com/saadcyber21/secret-sweep/blob/main/scripts/calibrate.py"] },
+    { k: "6 / 10", l: "OWASP ASI 2026 categories under active attack",
+      src: ["§04 coverage", "#coverage"] }
+  ],
+
+  /* ── Colophon — how this page itself is built ─────────────────────────── */
+  colophon: {
+    assertions: "56",
+    line: "Set in system serif &amp; sans · no frameworks · no trackers · no web fonts"
+  },
+
+  /* ── Command palette targets & header nav ─────────────────────────────── */
   nav: [
-    { id: "hero",        k: "00", label: "identity",   hd: false },
-    { id: "dossier",     k: "01", label: "dossier",    hd: true  },
-    { id: "thesis",      k: "02", label: "thesis",     hd: false },
-    { id: "work",        k: "03", label: "work",       hd: true  },
-    { id: "coverage",    k: "04", label: "coverage",   hd: false },
-    { id: "lab",         k: "05", label: "proof lab",  hd: true  },
-    { id: "credentials", k: "06", label: "credentials",hd: true  },
-    { id: "experience",  k: "07", label: "experience", hd: true  },
-    { id: "controls",    k: "08", label: "controls",   hd: false },
-    { id: "systems",     k: "09", label: "systems",    hd: false },
-    { id: "ledger",      k: "10", label: "ledger",     hd: true  },
-    { id: "path",        k: "11", label: "path",       hd: false },
-    { id: "contact",     k: "12", label: "contact",    hd: true  }
+    { id: "masthead",    k: "00", label: "masthead",     hd: false },
+    { id: "profile",     k: "01", label: "profile",      hd: true  },
+    { id: "method",      k: "02", label: "method",       hd: false },
+    { id: "work",        k: "03", label: "work",         hd: true  },
+    { id: "coverage",    k: "04", label: "coverage",     hd: true  },
+    { id: "verify",      k: "05", label: "verification", hd: true  },
+    { id: "credentials", k: "06", label: "credentials",  hd: true  },
+    { id: "experience",  k: "07", label: "experience",   hd: true  },
+    { id: "support",     k: "08", label: "supporting",   hd: false },
+    { id: "ledger",      k: "09", label: "limitations",  hd: true  },
+    { id: "path",        k: "10", label: "path",         hd: false },
+    { id: "contact",     k: "11", label: "contact",      hd: true  }
   ]
 };
