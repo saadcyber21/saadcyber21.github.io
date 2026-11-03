@@ -392,8 +392,8 @@ window.SITE = {
 
   /* ── Colophon — how this page itself is built ─────────────────────────── */
   colophon: {
-    assertions: "56",
-    line: "Set in system serif &amp; sans · no frameworks · no trackers · no web fonts"
+    assertions: "57",
+    line: "Set in Space Grotesk (self-hosted, OFL) + system sans &amp; mono · no frameworks · no trackers · no third-party requests"
   },
 
   /* ── Command palette targets & header nav ─────────────────────────────── */

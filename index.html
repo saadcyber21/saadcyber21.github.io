@@ -3,113 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<title>MD SAAD — Cybersecurity Engineer · Dossier</title>
-<meta name="description" content="Professional dossier of MD SAAD, cybersecurity engineer: security operations, detection engineering and AI agent security. Every claim links to the command or corpus that reproduces it.">
+<meta name="color-scheme" content="dark">
+<title>MD SAAD — Cybersecurity Engineer · AI Agent Security</title>
+<meta name="description" content="MD SAAD — cybersecurity engineer: security operations, detection engineering and AI agent security. Evidence over adjectives: every claim links to what reproduces it.">
 <meta name="author" content="MD SAAD">
 <meta name="keywords" content="cybersecurity engineer, SOC analyst, detection engineering, AI agent security, red team, MD SAAD, saadcyber21">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://saadcyber21.github.io/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="MD SAAD — Cybersecurity Engineer · Dossier">
-<meta property="og:description" content="Security operations, detection engineering and AI agent security. Evidence over adjectives: every claim on this page links to what reproduces it.">
+<meta property="og:title" content="MD SAAD — Cybersecurity Engineer · AI Agent Security">
+<meta property="og:description" content="Security operations, detection engineering and AI agent security. Every claim on this page links to the command or corpus that reproduces it.">
 <meta property="og:url" content="https://saadcyber21.github.io/">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/124501567?v=4&size=512">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F7F4EE'/%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%238E1F2F' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%238E1F2F' stroke-width='.75'/%3E%3Ctext x='16' y='20.5' font-family='Georgia,serif' font-size='11' text-anchor='middle' fill='%238E1F2F'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0C10'/%3E%3Cpath d='M8 22 L16 9 L24 22' fill='none' stroke='url(%23g)' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23818CF8'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E">
+<link rel="preload" href="assets/space-grotesk-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script>document.documentElement.className="js";</script>
 </head>
 <body>
 
 <a class="skip" href="#profile">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
-<!-- ═══ header ═══════════════════════════════════════════════════════ -->
+<!-- ═══ header ══════════════════════════════════════════════════════ -->
 <header id="hdr">
   <div class="hwrap">
-    <a class="brand" href="#masthead" aria-label="MD SAAD — top of page">MD&nbspSAAD</a>
+    <a class="brand" href="#masthead" aria-label="MD SAAD — top of page">
+      <span class="bmark" aria-hidden="true"></span>MD&nbsp;SAAD
+    </a>
     <nav id="nav" aria-label="Sections"></nav>
-    <button id="palBtn" type="button" aria-label="Open command palette">
-      <span class="palhint">index</span><kbd>⌘K</kbd>
-    </button>
+    <div class="hact">
+      <button id="palBtn" type="button" aria-label="Open command palette">
+        <span class="palhint">index</span><kbd>⌘K</kbd>
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
 
-<!-- ═══ masthead ═════════════════════════════════════════════════════ -->
-<section id="masthead" aria-label="Masthead">
-  <div class="wrap mast">
-    <div class="mast-rule" aria-hidden="true"></div>
-    <div class="mast-grid">
-      <div class="mast-main">
-        <p class="mast-kicker">Professional dossier · <span id="mastBuild"></span></p>
-        <h1 class="mast-name">MD&nbsp;SAAD</h1>
-        <p class="mast-title" id="mastTitle"></p>
-        <p class="mast-meta">
-          <span id="mastLoc"></span><i aria-hidden="true">·</i>
-          <a id="mastMail" href="mailto:Hackwithsaad@gmail.com"></a><i aria-hidden="true">·</i>
-          <a href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github.com/saadcyber21</a>
-        </p>
-        <blockquote class="epigraph">
-          <p id="epigraphText"></p>
-          <footer>— operating principle, applied to every project below</footer>
-        </blockquote>
-        <div class="mast-actions">
-          <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Résumé <span class="ar" aria-hidden="true">↓</span></a>
-          <a class="btn" href="https://github.com/saadcyber21" target="_blank" rel="noopener">GitHub</a>
-          <button class="btn" id="printBtn" type="button">Print dossier</button>
-        </div>
-      </div>
-      <div class="mast-seal" aria-hidden="true">
-        <svg viewBox="0 0 200 200" role="presentation">
-          <defs>
-            <path id="sealTop" d="M 100,100 m -72,0 a 72,72 0 1,1 144,0"/>
-            <path id="sealBot" d="M 100,100 m -72,0 a 72,72 0 1,0 144,0"/>
-          </defs>
-          <circle cx="100" cy="100" r="88" fill="none" stroke="currentColor" stroke-width="2"/>
-          <circle cx="100" cy="100" r="82" fill="none" stroke="currentColor" stroke-width="0.75"/>
-          <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" stroke-width="0.75"/>
-          <text font-size="12.2" letter-spacing="3" fill="currentColor">
-            <textPath href="#sealTop" startOffset="50%" text-anchor="middle">EVIDENCE OVER ADJECTIVES</textPath>
-          </text>
-          <text font-size="12.2" letter-spacing="3" fill="currentColor">
-            <textPath href="#sealBot" startOffset="50%" text-anchor="middle">MD SAAD · MMXXVI</textPath>
-          </text>
-          <text x="100" y="109" text-anchor="middle" font-size="30" letter-spacing="2" fill="currentColor" style="font-family:var(--serif)">MS</text>
-          <line x1="66" y1="100" x2="80" y2="100" stroke="currentColor" stroke-width="0.75"/>
-          <line x1="120" y1="100" x2="134" y2="100" stroke="currentColor" stroke-width="0.75"/>
-        </svg>
-      </div>
+<!-- ═══ hero ═════════════════════════════════════════════════════════ -->
+<section id="masthead" class="hero" aria-label="Introduction">
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+  <div class="wrap hero-wrap hero-center">
+    <div class="hero-top">
+      <p class="pill"><span class="dotp" aria-hidden="true"></span>open to security engineering &amp; detection roles</p>
+      <p class="hero-kicker">cybersecurity engineer · <span id="mastBuild"></span></p>
     </div>
-    <div class="strip" id="evStrip" aria-label="Key figures, with sources"></div>
+    <h1 class="hero-name">MD&nbsp;<span class="grad">SAAD</span></h1>
+    <p class="hero-role" id="mastTitle"></p>
+    <p class="hero-meta">
+      <span id="mastLoc"></span><i aria-hidden="true">/</i>
+      <a id="mastMail" href="mailto:Hackwithsaad@gmail.com"></a><i aria-hidden="true">/</i>
+      <a href="https://github.com/saadcyber21" target="_blank" rel="noopener noreferrer">github.com/saadcyber21</a>
+    </p>
+    <blockquote class="hero-thesis">
+      <p id="epigraphText"></p>
+      <footer>— the operating principle behind everything below</footer>
+    </blockquote>
+    <div class="hero-cta">
+      <a class="btn grad-btn" href="resume.pdf" target="_blank" rel="noopener">Résumé <span class="ar" aria-hidden="true">↓</span></a>
+      <a class="btn ghost-btn" href="https://github.com/saadcyber21" target="_blank" rel="noopener">GitHub ↗</a>
+      <button class="btn ghost-btn" id="printBtn" type="button">Print dossier</button>
+    </div>
+    <div class="bento" id="bento" aria-label="Career dashboard — key figures, each with its source"></div>
     <p class="prov" id="mastProv"></p>
   </div>
+  <div class="marquee" aria-hidden="true"><div class="mq-track" id="mqTrack"></div></div>
 </section>
 
 <!-- ═══ §01 profile ══════════════════════════════════════════════════ -->
 <section id="profile" aria-labelledby="profile-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 01</p>
-      <h2 id="profile-h">Profile</h2>
+      <span class="ghost" aria-hidden="true">01</span>
+      <p class="kicker">profile</p>
+      <h2 id="profile-h">The operator behind the tools</h2>
       <div class="langsw" role="group" aria-label="Introduction language">
         <button type="button" id="langEn" class="on">EN</button>
         <button type="button" id="langZh">中文</button>
       </div>
     </div>
     <div class="profile-grid">
-      <div class="rv">
-        <div class="prose" id="dosIntro"></div>
-        <h3 class="subhead" id="dosIntLabel"></h3>
-        <p class="body" id="dosInterests"></p>
-      </div>
+      <div class="prose rv" id="dosIntro"></div>
       <aside class="rv" aria-label="At a glance">
-        <h3 class="subhead">At a glance</h3>
-        <div class="glance" id="glance"></div>
-        <div class="aside-note">
-          <p>Full two-page résumé: <a href="resume.html">HTML</a> · <a href="resume.pdf">PDF</a>.<br>
-          Printable version of this dossier: <button type="button" class="linkbtn" id="printBtn2">print</button>.</p>
+        <div class="glass glance-card">
+          <h3 class="subhead">At a glance</h3>
+          <div class="glance" id="glance"></div>
+        </div>
+        <div class="glass note-card">
+          <h3 class="subhead" id="dosIntLabel"></h3>
+          <p id="dosInterests"></p>
+          <p class="notelink">Full résumé: <a href="resume.html">HTML</a> · <a href="resume.pdf">PDF</a> ·
+          <button type="button" class="linkbtn" id="printBtn2">print this page</button></p>
         </div>
       </aside>
     </div>
@@ -120,10 +107,11 @@
 <section id="method" aria-labelledby="method-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 02</p>
-      <h2 id="method-h">Method</h2>
-      <p class="lede">Three rules every project in this dossier is held to. Each one exists because
-      it was learned the expensive way, and each is enforced by a command, not a slogan.</p>
+      <span class="ghost" aria-hidden="true">02</span>
+      <p class="kicker">method</p>
+      <h2 id="method-h">Three rules, learned the expensive way</h2>
+      <p class="lede">Every project in this portfolio is held to these. Each exists because it was
+      violated once, and each is enforced by a command — not a slogan.</p>
     </div>
     <div class="maxims" id="principles"></div>
   </div>
@@ -133,10 +121,11 @@
 <section id="work" aria-labelledby="work-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 03</p>
-      <h2 id="work-h">Selected work</h2>
-      <p class="lede">Four projects, presented as exhibits: what each claims, how the claim is
-      reproduced, and — stated by the author — what it does not do.</p>
+      <span class="ghost" aria-hidden="true">03</span>
+      <p class="kicker">selected work</p>
+      <h2 id="work-h">Four exhibits, with their refutations attached</h2>
+      <p class="lede">What each project claims, the command that reproduces the claim, and — stated by
+      the author — exactly what it does not do.</p>
     </div>
     <div id="dossiers"></div>
   </div>
@@ -146,35 +135,28 @@
 <section id="coverage" aria-labelledby="coverage-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 04</p>
-      <h2 id="coverage-h">Coverage — OWASP Agentic AI Top 10 (2026)</h2>
+      <span class="ghost" aria-hidden="true">04</span>
+      <p class="kicker">coverage</p>
+      <h2 id="coverage-h">OWASP Agentic AI Top 10 · 2026</h2>
       <p class="lede" id="covLede"></p>
     </div>
-    <div class="rv">
-      <table class="covtable" id="asiTable" aria-describedby="coverage-h">
-        <thead><tr><th scope="col">ID</th><th scope="col">Category</th><th scope="col">Status</th><th scope="col">What is tested / what is missing</th></tr></thead>
-        <tbody id="asiBody"></tbody>
-      </table>
-      <p class="covlegend"><span class="dot cov"></span> covered by at least one attack in the library&emsp;
-      <span class="dot blind"></span> blind spot — no attack yet, printed in every report</p>
-    </div>
+    <div class="covgrid rv" id="asiGrid" role="table" aria-labelledby="coverage-h"></div>
+    <p class="covlegend rv"><span class="dot cov"></span> covered by at least one attack in the library&emsp;
+    <span class="dot blind"></span> blind spot — no attack yet, printed in every report</p>
   </div>
 </section>
-
-<p class="print-only labnote">The interactive verification lab (§05) is omitted in print —
-it only means something when you can run it. Live: https://saadcyber21.github.io/#verify</p>
 
 <!-- ═══ §05 verification ═════════════════════════════════════════════ -->
 <section id="verify" aria-labelledby="verify-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 05</p>
-      <h2 id="verify-h">Verification lab</h2>
-      <p class="lede">Run the algorithms in this browser. The lab is a faithful JavaScript
-      reimplementation of the documented detector logic — same signals, same thresholds, same
-      guards — and is labelled as such; it is not the shipped Python artefact.</p>
+      <span class="ghost" aria-hidden="true">05</span>
+      <p class="kicker">verification lab</p>
+      <h2 id="verify-h">Run the algorithms, right here</h2>
+      <p class="lede">A faithful JavaScript reimplementation of the documented detector logic — same
+      signals, same thresholds, same guards — labelled as such. It is not the shipped Python artefact.</p>
     </div>
-    <div class="lab rv">
+    <div class="lab glass rv">
       <div class="tabs" role="tablist" aria-label="Verification demos">
         <button role="tab" id="t-secret" aria-controls="p-secret" aria-selected="true" class="on" type="button">Secret scanner</button>
         <button role="tab" id="t-gate" aria-controls="p-gate" aria-selected="false" type="button">Tool-call gateway</button>
@@ -188,8 +170,8 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
         <textarea class="inp" id="secIn" rows="7" spellcheck="false"></textarea>
         <div class="presets" id="secPresets"></div>
         <div class="runrow">
-          <button class="btn primary" id="secRun" type="button">Scan</button>
-          <button class="btn quiet" id="secClear" type="button">Clear</button>
+          <button class="btn grad-btn" id="secRun" type="button">▶ Scan</button>
+          <button class="btn ghost-btn" id="secClear" type="button">Clear</button>
         </div>
         <ul class="findings" id="secOut" aria-live="polite"></ul>
         <div class="verdict" id="secVerdict" hidden></div>
@@ -200,13 +182,13 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
         RBAC resolves the role, signature inspection reads the payload, and a refusal is explicit — a 406 with the matched signature — never a silent drop.</p>
         <div class="presets">
           <button class="pset" id="gwBenign" type="button">benign tool call</button>
-          <button class="pset warn" id="gwHostile" type="button">indirect prompt injection</button>
+          <button class="pset warn" id="gwHostile" type="button">⚠ indirect prompt injection</button>
           <button class="pset" id="gwEdit" type="button">edit payload</button>
         </div>
         <label class="fieldlabel" for="gwIn">Tool-call payload (JSON)</label>
         <textarea class="inp" id="gwIn" rows="11" spellcheck="false"></textarea>
         <div class="runrow">
-          <button class="btn primary" id="gwRun" type="button">Pass through gateway</button>
+          <button class="btn grad-btn" id="gwRun" type="button">Pass through gateway</button>
         </div>
         <div class="gwsplit">
           <div>
@@ -225,18 +207,12 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
         <code>python3 scripts/calibrate.py</code> against <span id="calibCorpus"></span> —
         <b id="calibFiles"></b> files, <b id="calibLines"></b> lines — and re-produced in CI on every commit.</p>
         <div class="calibgrid">
-          <div class="calibcard">
-            <p class="cl-k">610 → 23</p>
-            <p class="cl-l">lines flagged on the corpus by the naive <code>entropy &gt; 4.5</code> test versus the calibrated detector — 26× less noise, and the naive test still missed real credentials.</p>
-          </div>
-          <div class="calibcard">
-            <p class="cl-k">0.0076%</p>
-            <p class="cl-l">false-positive rate (23 of 304,467 lines). A detector that cries wolf gets switched off within a week; this one is CI-usable.</p>
-          </div>
-          <div class="calibcard">
-            <p class="cl-k">&lt; 24 chars</p>
-            <p class="cl-l">the structural blind spot that started the project: <code>entropy &gt; 4.5</code> cannot fire below 24 characters, so a 20-character AWS key ID was undetectable by construction.</p>
-          </div>
+          <div class="calibcard glass"><p class="cl-k">610 → 23</p>
+            <p class="cl-l">lines flagged on the corpus by the naive <code>entropy &gt; 4.5</code> test versus the calibrated detector — 26× less noise, and the naive test still missed real credentials.</p></div>
+          <div class="calibcard glass"><p class="cl-k">0.0076%</p>
+            <p class="cl-l">false-positive rate (23 of 304,467 lines). A detector that cries wolf gets switched off within a week; this one is CI-usable.</p></div>
+          <div class="calibcard glass"><p class="cl-k">&lt; 24 chars</p>
+            <p class="cl-l">the structural blind spot that started the project: <code>entropy &gt; 4.5</code> cannot fire below 24 characters, so a 20-character AWS key ID was undetectable by construction.</p></div>
         </div>
         <h4 class="paneh">Measured recall — planted-secret corpora</h4>
         <ul class="recall" id="recallList"></ul>
@@ -250,21 +226,25 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="credentials" aria-labelledby="credentials-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 06</p>
-      <h2 id="credentials-h">Credentials</h2>
-      <p class="lede">Competencies are tagged by the kind of evidence behind each: professional
-      practice, a public repository, or formal certification. No unmarked claims.</p>
+      <span class="ghost" aria-hidden="true">06</span>
+      <p class="kicker">credentials</p>
+      <h2 id="credentials-h">Competencies, tagged by evidence</h2>
+      <p class="lede">Every line says what stands behind it: professional practice, a public
+      repository, or formal certification. No unmarked claims.</p>
     </div>
     <div class="credgrid">
       <div class="rv">
-        <h3 class="subhead">Competencies</h3>
         <div class="skgrid" id="skills"></div>
       </div>
       <div class="rv">
-        <h3 class="subhead">Certifications · <span id="certCount"></span></h3>
-        <ul class="certlist" id="certs"></ul>
-        <h3 class="subhead">Education</h3>
-        <div class="edubox" id="edu"></div>
+        <div class="glass cert-card">
+          <h3 class="subhead">Certifications · <span id="certCount"></span></h3>
+          <ul class="certlist" id="certs"></ul>
+        </div>
+        <div class="glass edu-card">
+          <h3 class="subhead">Education</h3>
+          <div class="edubox" id="edu"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -274,8 +254,9 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="experience" aria-labelledby="experience-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 07</p>
-      <h2 id="experience-h">Experience</h2>
+      <span class="ghost" aria-hidden="true">07</span>
+      <p class="kicker">experience</p>
+      <h2 id="experience-h">Three roles, exact dates, names withheld</h2>
       <p class="lede" id="expNote"></p>
     </div>
     <div class="xlist" id="xlist"></div>
@@ -286,20 +267,14 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="support" aria-labelledby="support-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 08</p>
-      <h2 id="support-h">Supporting work</h2>
-      <p class="lede">Detection-and-control tooling and backend systems, each with its stated
-      limitation. Smaller scope than §03; same standard.</p>
+      <span class="ghost" aria-hidden="true">08</span>
+      <p class="kicker">supporting work</p>
+      <h2 id="support-h">Control plane &amp; backend systems</h2>
+      <p class="lede">Smaller scope than §03, same standard: each with its stated limitation.</p>
     </div>
     <div class="supgrid">
-      <div class="rv">
-        <h3 class="subhead">Control plane &amp; detection engineering</h3>
-        <div id="controls"></div>
-      </div>
-      <div class="rv">
-        <h3 class="subhead">Backend systems</h3>
-        <div id="systems"></div>
-      </div>
+      <div class="rv" id="controls"></div>
+      <div class="rv" id="systems"></div>
     </div>
   </div>
 </section>
@@ -308,10 +283,11 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="ledger" aria-labelledby="ledger-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 09</p>
-      <h2 id="ledger-h">Known limitations</h2>
-      <p class="lede">Stated openly, because a portfolio that hides its gaps is marketing.
-      Every row is a fact about this work that a reviewer would otherwise have to discover.</p>
+      <span class="ghost" aria-hidden="true">09</span>
+      <p class="kicker">known limitations</p>
+      <h2 id="ledger-h">What this work does not do</h2>
+      <p class="lede">Stated openly, because a portfolio that hides its gaps is marketing. Every row
+      is a fact a reviewer would otherwise have to discover.</p>
     </div>
     <div class="led" id="ledgerList"></div>
   </div>
@@ -321,10 +297,10 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="path" aria-labelledby="path-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 10</p>
-      <h2 id="path-h">Path</h2>
-      <p class="lede">The order things were built in, and why — from CS50 to the adversarial
-      counterpart of everything before it.</p>
+      <span class="ghost" aria-hidden="true">10</span>
+      <p class="kicker">path</p>
+      <h2 id="path-h">The order things were built in</h2>
+      <p class="lede">From CS50 pointers to the adversarial counterpart of everything before it.</p>
     </div>
     <div class="tl" id="timeline"></div>
   </div>
@@ -334,16 +310,19 @@ it only means something when you can run it. Live: https://saadcyber21.github.io
 <section id="contact" aria-labelledby="contact-h">
   <div class="wrap">
     <div class="sechead rv">
-      <p class="kicker">§ 11</p>
-      <h2 id="contact-h">Contact</h2>
+      <span class="ghost" aria-hidden="true">11</span>
+      <p class="kicker">contact</p>
+      <h2 id="contact-h">Let’s talk security</h2>
     </div>
-    <div class="contact-grid rv">
-      <div>
-        <p class="ct-mail"><a href="mailto:Hackwithsaad@gmail.com" id="ctMail">Hackwithsaad@gmail.com</a></p>
-        <p class="body">Open to security engineering, detection engineering and AI-security roles —
-        and to collaborators who hold their tools to a measurable standard.
-        References, engagement letters and full employer details on request.</p>
-        <div class="ctlinks" id="ctlinks"></div>
+    <div class="cta-panel rv">
+      <div class="contact-grid">
+        <div>
+          <p class="ct-mail"><a href="mailto:Hackwithsaad@gmail.com" id="ctMail">Hackwithsaad@gmail.com</a></p>
+          <p class="body">Open to security engineering, detection engineering and AI-security roles —
+          and to collaborators who hold their tools to a measurable standard.
+          References, engagement letters and full employer details on request.</p>
+          <div class="ctlinks" id="ctlinks"></div>
+        </div>
       </div>
       <div class="print-only" id="printContact"></div>
     </div>

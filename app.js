@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   MD SAAD — dossier · app.js
+   MD SAAD — dossier · app.js (v3)
    Renders window.SITE into the document. No framework, no tracker.
    The verification-lab detector below is a faithful port of secret-sweep's
    documented logic and is exposed as window.__lab so it stays testable
@@ -383,34 +383,85 @@
     }).join("");
   }
 
-  /* ══ masthead ═════════════════════════════════════════════════════════ */
-  function initMasthead() {
+  /* ══ hero ═══════════════════════════════════════════════════════════ */
+  function initHero() {
     var d = S.dossier, m = S.meta;
     var set = function (id, v) { var el = $("#" + id); if (el) el.textContent = v; };
     set("mastBuild", "data of record " + m.buildDate);
     set("mastTitle", d.titleEn);
     set("mastLoc", d.location);
     set("mastMail", d.email);
-    set("epigraphText", "“" + m.thesis + "”");
+    set("epigraphText", m.thesis);
 
-    var strip = $("#evStrip");
-    if (strip) {
-      strip.innerHTML = S.evidence.map(function (e) {
-        var href = e.src[1];
-        var internal = href.charAt(0) === "#";
-        return '<div class="ev-tile">' +
-          '<p class="ev-k">' + esc(tele(e.k)) + '</p>' +
-          '<p class="ev-l">' + esc(e.l) + '</p>' +
-          '<p class="ev-src">source: <a href="' + esc(href) + '"' +
-          (internal ? "" : ' target="_blank" rel="noopener noreferrer"') + '>' + esc(e.src[0]) + '</a></p>' +
-          '</div>';
-      }).join("");
-    }
+    initBento();
 
     set("mastProv", "Repository data pulled from the GitHub REST API on " + m.buildDate +
       " (" + m.publicRepos + " public repositories · " + m.totalCommits +
       " commits · account since " + m.accountSince + " · active " + m.activeWindow +
       "). Nothing on this page live-updates; a number that silently drifts is worse than a stale one with a date on it.");
+
+    var mq = $("#mqTrack");
+    if (mq) {
+      var words = ["SIEM engineering", "threat hunting", "MITRE ATT&CK", "red team",
+        "prompt injection", "zero trust", "detection engineering", "SARIF 2.1.0",
+        "OWASP ASI 2026", "calibrated false-positive rates", "malware analysis",
+        "incident response", "compliance as code", "explainable forensics"];
+      var half = words.map(function (w) { return "<span>" + esc(w) + "</span>"; }).join("");
+      mq.innerHTML = half + half; /* doubled so the -50% loop is seamless */
+    }
+  }
+
+
+  /* bento board — every tile carries its source, per the house rule */
+  function initBento() {
+    var host = $("#bento"); if (!host) return;
+    var d = S.dossier, m = S.meta;
+    function src(label, href, internal) {
+      return '<p class="ev-src">source: <a href="' + esc(href) + '"' +
+        (internal ? "" : ' target="_blank" rel="noopener noreferrer"') + '>' + esc(label) + '</a></p>';
+    }
+    var tiles = [];
+    tiles.push('<div class="btile b2x2 sp">' +
+      '<p class="bt-k">SOC operator</p>' +
+      '<p class="bt-big">24×7</p>' +
+      '<p class="bt-l">enterprise SOC coverage, SLA-bound — detect · respond · report</p>' +
+      '<div class="bmini">' + [d.glance[0], d.glance[1], d.glance[3]].map(function (g) {
+        return '<div class="g"><div class="k">' + esc(g.k) + '</div><div class="l">' + esc(g.l) + '</div></div>';
+      }).join("") + '<div class="g"><div class="k">Mar 25 →</div><div class="l">lead analyst &amp; compliance manager, current role</div></div></div>' +
+      src("§07 experience", "#experience", true) + '</div>');
+    tiles.push('<div class="btile b2 sp">' +
+      '<p class="bt-k">secret-sweep · calibrated noise</p>' +
+      '<p class="bt-big">610 → 23</p>' +
+      '<div class="bbars">' +
+        '<div class="bbar"><span>naive</span><i><b class="fill naive"></b></i><span>610</span></div>' +
+        '<div class="bbar"><span>calibrated</span><i><b class="fill calib"></b></i><span>23</span></div>' +
+      '</div>' +
+      '<p class="bt-l">false positives over 304,467 lines of CPython 3.11 stdlib</p>' +
+      src("scripts/calibrate.py", "https://github.com/saadcyber21/secret-sweep/blob/main/scripts/calibrate.py") + '</div>');
+    tiles.push('<div class="btile sp">' +
+      '<p class="bt-k">open output</p>' +
+      '<p class="bt-big">' + m.publicRepos + ' · ' + m.totalCommits + '</p>' +
+      '<p class="bt-l">public repositories · commits, API-verified</p>' +
+      src("github.com/saadcyber21", "https://github.com/saadcyber21") + '</div>');
+    tiles.push('<div class="btile sp">' +
+      '<p class="bt-k">certified</p>' +
+      '<p class="bt-big">' + S.certs.length + '</p>' +
+      '<p class="bt-l">certifications &amp; career paths · SC-200 in progress</p>' +
+      src("§06 credentials", "#credentials", true) + '</div>');
+    tiles.push('<div class="btile b2 sp">' +
+      '<p class="bt-k">owasp asi 2026 · attack coverage</p>' +
+      '<p class="bt-big">6 / 10</p>' +
+      '<div class="bdots">' + S.asi.rows.map(function (r) {
+        return '<i class="' + (r.state === "covered" ? "on" : "") + '" title="' + esc(r.id) + '"></i>';
+      }).join("") + '</div>' +
+      '<p class="bt-l">six categories under active attack; four blind spots printed on every run</p>' +
+      src("§04 coverage", "#coverage", true) + '</div>');
+    tiles.push('<div class="btile b2 sp">' +
+      '<p class="bt-k">quillback · CI-gated</p>' +
+      '<p class="bt-big">19 → 0</p>' +
+      '<p class="bt-l">findings on the vulnerable reference agent → hardened variant, on every commit · 18 attacks · 0 deps</p>' +
+      src("github.com/saadcyber21/quillback", "https://github.com/saadcyber21/quillback") + '</div>');
+    host.innerHTML = tiles.join("");
   }
 
   /* ══ header nav + scroll-spy ══════════════════════════════════════════ */
@@ -444,33 +495,43 @@
     });
   }
 
-  /* ══ reveal ═══════════════════════════════════════════════════════════ */
+  /* ══ reveal + spotlight ═══════════════════════════════════════════════ */
   function initReveal() {
     var els = $$(".rv");
     if (RM || !("IntersectionObserver" in window)) {
       els.forEach(function (el) { el.classList.add("in"); });
-      return;
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.06 });
+      els.forEach(function (el) { io.observe(el); });
     }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+  }
+  function initSpotlight() {
+    if (RM || !window.matchMedia("(hover: hover)").matches) return;
+    $$(".sp").forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        el.style.setProperty("--my", (e.clientY - r.top) + "px");
       });
-    }, { threshold: 0.06 });
-    els.forEach(function (el) { io.observe(el); });
+    });
   }
 
   /* ══ §01 profile ══════════════════════════════════════════════════════ */
   function renderDossier() {
     var d = S.dossier;
     var intro = $("#dosIntro"); if (!intro) return;
-    intro.className = "prose" + (LANG === "zh" ? " zh" : "");
+    intro.className = "prose rv in" + (LANG === "zh" ? " zh" : "");
     intro.innerHTML = (LANG === "zh" ? d.introZh : d.introEn).map(function (p) {
       return "<p>" + esc(p) + "</p>";
     }).join("");
     var lbl = $("#dosIntLabel");
     if (lbl) lbl.textContent = LANG === "zh" ? "职业兴趣" : "Professional interests";
     var di = $("#dosInterests");
-    if (di) { di.textContent = LANG === "zh" ? d.interestsZh : d.interestsEn; di.className = "body"; }
+    if (di) di.textContent = LANG === "zh" ? d.interestsZh : d.interestsEn;
     var g = $("#glance");
     if (g) {
       g.innerHTML = d.glance.map(function (x) {
@@ -497,8 +558,8 @@
   function initMethod() {
     var host = $("#principles"); if (!host) return;
     host.innerHTML = S.principles.map(function (p) {
-      return '<article class="maxim rv">' +
-        '<p class="mn">Rule ' + esc(p.n) + '</p>' +
+      return '<article class="maxim sp rv">' +
+        '<p class="mn">RULE ' + esc(p.n) + '</p>' +
         '<h3>' + esc(p.title) + '</h3>' +
         '<p>' + p.body + '</p>' +
         '<p class="mp">' + esc(p.proof) + ' <a href="' + esc(p.link[1]) + '" target="_blank" rel="noopener noreferrer">' + esc(p.link[0]) + ' ↗</a></p>' +
@@ -511,9 +572,9 @@
     var host = $("#dossiers"); if (!host) return;
     host.innerHTML = S.projects.map(function (p, i) {
       var no = ("0" + (i + 1)).slice(-2);
-      return '<article class="exhibit rv" id="d-' + esc(p.key) + '">' +
+      return '<article class="exhibit sp rv" id="d-' + esc(p.key) + '">' +
         '<div class="ex-head">' +
-          '<span class="ex-no">Exhibit ' + no + '</span>' +
+          '<span class="ex-no">EXHIBIT ' + no + '</span>' +
           '<h3 class="ex-name"><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.name) + '</a></h3>' +
           '<span class="ex-chips">' +
             '<span class="chip v">' + esc(p.version) + '</span>' +
@@ -523,7 +584,7 @@
           '</span>' +
         '</div>' +
         '<p class="ex-tag">' + esc(p.tag) + '</p>' +
-        '<p class="ex-claim">“' + esc(p.claim) + '”</p>' +
+        '<p class="ex-claim">' + esc(p.claim) + '</p>' +
         '<p class="ex-story">' + p.story + '</p>' +
         '<div class="ex-metrics">' + p.metrics.map(function (m) {
           return '<div class="mc"><p class="mk">' + esc(m.k) + '</p><p class="ml">' + esc(m.l) + '</p></div>';
@@ -542,21 +603,23 @@
     });
   }
 
-  /* ══ §04 coverage ═════════════════════════════════════════════════════ */
+  /* ══ §04 coverage — tile grid ═════════════════════════════════════════ */
   function initCoverage() {
-    var body = $("#asiBody"); if (!body) return;
+    var grid = $("#asiGrid"); if (!grid) return;
     var lede = $("#covLede");
     if (lede) lede.textContent = "quillback's attack library currently covers " + S.asi.covered.length +
       " of the 10 categories in the OWASP Top 10 for Agentic Applications (2026). The " +
       S.asi.blind.length + " blind spots are printed in every report the tool produces — a coverage claim that hides its holes is advertising.";
-    body.innerHTML = S.asi.rows.map(function (r, i) {
+    grid.innerHTML = S.asi.rows.map(function (r, i) {
       var cov = r.state === "covered";
-      return '<tr class="covrow' + (cov ? "" : " blindrow") + '" data-i="' + i + '">' +
-        '<td class="cid">' + esc(r.id) + '</td>' +
-        '<td class="cnm">' + esc(r.name) + '</td>' +
-        '<td class="cst ' + (cov ? "cov" : "blind") + '">' + (cov ? "● covered" : "○ blind spot") + '</td>' +
-        '<td class="cnote">' + esc(r.note) + '</td>' +
-        '</tr>';
+      return '<div class="covtile sp ' + (cov ? "covered" : "blind") + '" data-i="' + i + '" role="row">' +
+        '<span class="cid" role="cell">' + esc(r.id) + '</span>' +
+        '<span class="cnm" role="cell">' + esc(r.name) + '</span>' +
+        '<span class="cst ' + (cov ? "cov" : "blind") + '" role="cell">' +
+          '<span class="dot ' + (cov ? "cov" : "blind") + '" aria-hidden="true"></span>' +
+          (cov ? "covered" : "blind spot") + '</span>' +
+        '<span class="cnote" role="cell">' + esc(r.note) + '</span>' +
+        '</div>';
     }).join("");
   }
 
@@ -620,7 +683,7 @@
   function renderSkills() {
     var host = $("#skills"); if (!host) return;
     host.innerHTML = S.skills.map(function (g) {
-      return '<div class="skg"><h4>' + esc(LANG === "zh" ? g.gZh : g.g) + '</h4><ul>' +
+      return '<div class="skg sp"><h4>' + esc(LANG === "zh" ? g.gZh : g.g) + '</h4><ul>' +
         g.items.map(function (it) {
           var lbl = S.evLabels[it.ev] ? (LANG === "zh" ? S.evLabels[it.ev].zh : S.evLabels[it.ev].en) : it.ev;
           var tag = '<span class="evtag ' + esc(it.ev) + '">' + esc(lbl) +
@@ -674,7 +737,7 @@
     var host = $("#controls");
     if (host) {
       host.innerHTML = S.controls.map(function (c) {
-        return '<a class="ccard rv" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">' +
+        return '<a class="ccard sp rv" href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">' +
           '<div class="cn">' + esc(c.real) + '</div>' +
           '<div class="al">repo · ' + esc(c.name) + '</div>' +
           '<p>' + c.tag + '</p>' +
@@ -686,7 +749,7 @@
     var sys = $("#systems");
     if (sys) {
       sys.innerHTML = S.systems.map(function (s) {
-        return '<div class="sysrow rv">' +
+        return '<div class="sysrow sp rv">' +
           '<div class="sn">' + esc(s.name) + '</div>' +
           '<div class="st2">' + esc(s.tag) + '</div>' +
           '<p class="sd">' + s.detail + '</p>' +
@@ -701,10 +764,9 @@
   /* ══ §09 limitations · §10 path · §11 contact ═════════════════════════ */
   function initLedger() {
     var host = $("#ledgerList"); if (!host) return;
-    var labels = { gap: "gap", scope: "scope", "this-site": "site" };
     host.innerHTML = S.ledger.map(function (l) {
       return '<div class="ledrow rv" data-s="' + esc(l.s) + '">' +
-        '<span class="ls">' + esc(labels[l.s] || l.s) + '</span>' +
+        '<span class="ls">' + esc(l.s === "this-site" ? "site" : l.s) + '</span>' +
         '<div><p class="lt">' + esc(l.t) + '</p><p class="ld">' + esc(l.d) + '</p></div>' +
         '</div>';
     }).join("");
@@ -844,7 +906,7 @@
 
   /* ══ boot ═════════════════════════════════════════════════════════════ */
   function renderAll() {
-    initMasthead();
+    initHero();
     initNav();
     renderDossier();
     initLangSwitch();
@@ -862,6 +924,7 @@
     initPalette();
     initMisc();
     initReveal();
+    initSpotlight();
     initScrollSpy();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderAll);

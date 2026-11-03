@@ -5,9 +5,10 @@ Portfolio for [@saadcyber21](https://github.com/saadcyber21) — AI agent scaffo
 Static. No framework, no build step, no tracker, no analytics, no CDN, no webfont
 requests. Four files; every fact is generated from the GitHub API or stated by hand.
 
-Design: a paper-and-ink editorial dossier — numbered sections, hairline rules, one
-oxblood accent, system serif/sans/mono only. Light by default with an automatic
-night variant; it prints as a document.
+Design: a dark SaaS-style bento hybrid — centred hero, aurora glows, glass tiles in
+mixed-span bento grids, gradient accents, one self-hosted variable typeface
+(Space Grotesk, OFL) plus system sans/mono. Dark by design on screen; it prints
+as a clean light document.
 
 ## Layout
 
